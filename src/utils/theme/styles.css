@@ -1,0 +1,20 @@
+/* styles.css */
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark header {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark .text-gray-800 {
+  color: #ffffff;
+}
+
+.dark .text-gray-700 {
+  color: #cccccc;
+}
+
+/* Add more dark mode styles as needed */

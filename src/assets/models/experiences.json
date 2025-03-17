@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "title": "Mobile Engineer at SparkMinds",
+      "type": "Full-time",
+      "startDate": "2023-08-01T00:00:00Z",
+      "endDate": "Now",
+      "language": "Flutter, Kotlin, React Native",
+      "link": "https://moneyspace.net/",
+      "purpose": [
+        "Money transfers and bank transactions",
+        "Social media, E-commerce"
+      ],
+      "description": [
+        "Configure and set up the app environment with multiple flavors.",
+        "Implement state management using GetX, Provider, and Bloc/Cubit",
+        "Integrate Firebase for push notifications",
+        "Develop and deploy service app link using nextjs + netlify",
+        "Manage internal builds and release applications on app stores (Google Play Store, Apple App Store)",
+        "Collaborate with the team to develop the core app features."
+      ]
+    },
+    {
+      "title": "Mobile Engineer at Voyager",
+      "type": "Part-time",
+      "startDate": "2023-05-01T00:00:00Z",
+      "language": "Flutter, Kotlin",
+      "link": "https://appadvice.com/app/9dots/6468874478",
+      "endDate": "2023-08-01T00:00:00Z",
+      "purpose": [
+        "IOT solution"
+      ],
+      "description": [
+        "Combine Flutter with native code (Kotlin) to build and release call video, SDK Chime, NFC features with Flutter code.",
+        "Involved in ui graph sensor optimization with big data"
+      ]
+    },
+    {
+      "title": "Mobile Engineer at GreenAgri",
+      "type": "Full-time",
+      "startDate": "2022-04-01T00:00:00Z",
+      "language": "Flutter",
+      "link": "https://greencheck.vn/",
+      "endDate": "2023-05-30T00:00:00Z",
+      "purpose": [
+        "Collection data, equipment management, farm crops",
+        "E-commerce"
+      ],
+      "description": [
+        "Implement state management using GetX, and Bloc/Cubit",
+        "Integrate Firebase for push notifications",
+        "Responsible for building and release applications on app stores (Google Play Store, Apple App Store)",
+        "Joining with internal team config and release app"
+      ]
+    },
+    {
+      "title": "Full-stack internship at Positive Thinking",
+      "type": "Full-time",
+      "startDate": "2022-04-01T00:00:00Z",
+      "language": "Javascript, Java",
+      "endDate": "2022-04-30T00:00:00Z",
+      "link": "https://www.viator.com/",
+      "purpose": [
+        "Traveling",
+        "Javascript Foundation"
+      ],
+      "description": [
+        "Joining internship programming in 2 months",
+        "Participating in the Viator project about travel as Full stack in 3 months",
+        "Working with Redux, Typescript, Java.",
+        "Working with agile scrum methodology."
+      ]
+    },
+    {
+      "title": "Mobile Internship at Atoma",
+      "type": "Full-time",
+      "startDate": "2021-07-01T00:00:00Z",
+      "language": "Flutter, Vuejs, Laravel",
+      "link": "https://github.com/trungquan2k/HR-MANAGERMENT",
+      "endDate": "2021-09-01T00:00:00Z",
+      "purpose": [
+        "Practice personal project",
+        "HR management project"
+      ],
+      "description": [
+        "Creating API , database using Laravel framework",
+        "Developing Ui depend requirement of leader for HR manager",
+        "Making admin page for HR manager using Vuejs (CRUD feature)"
+      ]
+    }
+  ]
+}

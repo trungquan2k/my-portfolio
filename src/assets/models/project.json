@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "title": "IOT Solution",
+      "description": "Remote control home appliance control\nCheck the room's environmental information with the built-in sensor\nCooperation with Gramo products\nIt is equipped with various other functions that are convenient for daily life.",
+      "image": "/src/assets/images/iot_project.png"
+    },
+    {
+      "title": "Green Check App",
+      "description": "Farm management software QR code for traceability A network system connecting experts for each type of agricultural product.",
+      "image": "/src/assets/images/green_check_project.png"
+    },
+    {
+      "title": "Car Auto Tracking",
+      "description": "Control orders in auto and motorbike repair shops. Helps window owners make monthly statistics on spending accounts",
+      "image": "/src/assets/images/hero_auto_tracking.png"
+    },
+    {
+      "title": "Traveling",
+      "description": "Web site for traveling.",
+      "image": "/src/assets/images/viator_project.png"
+    },
+    {
+      "title": "E-commerce",
+      "description": "Application for store sell product.",
+      "image": "/src/assets/images/green_agri.png"
+    }
+  ]
+}
