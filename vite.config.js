@@ -11,6 +11,7 @@ export default defineConfig({
     mimeTypes: {
       jsx: 'text/javascript',
     },
+    base: './',
   },
   resolve: {
     alias: {
