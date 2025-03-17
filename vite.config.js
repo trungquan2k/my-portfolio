@@ -14,7 +14,7 @@ export default defineConfig({
     base: './',
   },
   build: {
-    outDir: 'dist', // Ensure this is correctly set
+    outDir: 'dist/index.html', // Ensure this is correctly set
   },
   resolve: {
     alias: {
