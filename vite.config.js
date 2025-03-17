@@ -11,7 +11,7 @@ export default defineConfig({
     mimeTypes: {
       jsx: 'text/javascript',
     },
-    base: '/',
+    base: './',
   },
   build: {
     outDir: 'dist', // Ensure this is correctly set
