@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { SunIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import NavLink from '@/components/ui/nav-link/nav-link';
-import TabLink from '@/components/ui/link/tab-link';
+import NavLink from '../ui/nav-link/nav-link';
+import TabLink from '../ui/link/tab-link';
 
 const Header = () => {
   const navigate = useNavigate();

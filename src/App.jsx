@@ -1,5 +1,4 @@
-import MainLayout from '@/components/layout/main-layout';
-// import AboutMe from '@/features/about-me';
+import MainLayout from './components/layout/main-layout';
 import { Route, Routes } from 'react-router-dom';
 
 const App = () => {

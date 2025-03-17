@@ -1,17 +1,9 @@
-import useLocalStorage from "@/hooks/useLocalStorage";
-import { setProfile } from "@/redux/globalSlice";
-import clsx from "clsx";
-import {
-  House,
-  LogOut,
-  Menu,
-  PackageOpen,
-  ShoppingBag,
-  Warehouse,
-  Users,
-} from "lucide-react";
-import { useDispatch } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
+import useLocalStorage from '@/hooks/useLocalStorage';
+import { setProfile } from '@/redux/globalSlice';
+import clsx from 'clsx';
+import { House, LogOut, Menu, PackageOpen, Users } from 'lucide-react';
+import { useDispatch } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -20,30 +12,30 @@ const Sidebar = () => {
 
   const menus = [
     {
-      label: "Trang chủ",
+      label: 'Trang chủ',
       icon: <House width={24} height={24} />,
-      link: "/",
+      link: '/',
     },
     {
-      label: "Quản lý lương",
+      label: 'Quản lý lương',
       icon: <Users width={24} height={24} />,
-      link: "/salaries",
+      link: '/salaries',
     },
     {
-      label: "Quản lý thu chi",
+      label: 'Quản lý thu chi',
       icon: <Menu width={24} height={24} />,
-      link: "/finances",
+      link: '/finances',
     },
     {
-      label: "Sổ cái",
+      label: 'Sổ cái',
       icon: <PackageOpen width={24} height={24} />,
-      link: "/transactions",
+      link: '/transactions',
     },
   ];
 
   const onLogout = () => {
     removeLocalStorage();
-    navigate("/");
+    navigate('/');
     dispatch(setProfile(undefined));
   };
 
@@ -55,11 +47,11 @@ const Sidebar = () => {
             key={`menu-item-${index}`}
             className={({ isActive }) =>
               clsx(
-                "flex items-center w-full h-12 gap-3 px-4 duration-300 rounded-md shadow outline-none",
+                'flex items-center w-full h-12 gap-3 px-4 duration-300 rounded-md shadow outline-none',
                 {
-                  "bg-white text-primary-1 hover:bg-[#e9ecef]": !isActive,
-                  "bg-primary-1 text-white": isActive,
-                }
+                  'bg-white text-primary-1 hover:bg-[#e9ecef]': !isActive,
+                  'bg-primary-1 text-white': isActive,
+                },
               )
             }
             to={item.link}

@@ -1,12 +1,12 @@
-import Header from '@/components/common/header';
-import Footer from '@/components/common/footer';
+import Header from '../common/header';
+import Footer from '../common/footer';
 import { Loader } from 'lucide-react';
 import { useSelector } from 'react-redux';
-import AboutMe from '@/features/about-me';
-import ExperienceView from '@/features/experiences';
-import SkillsView from '@/features/skills';
-import ProjectView from '@/features/project';
-import ContactMeView from '@/features/contact-me';
+import AboutMe from '../../features/about-me';
+import ExperienceView from '../../features/experiences';
+import SkillsView from '../../features/skills';
+import ProjectView from '../../features/project';
+import ContactMeView from '../../features/contact-me';
 const MainLayout = () => {
   const { loading } = useSelector((state) => state.global);
 

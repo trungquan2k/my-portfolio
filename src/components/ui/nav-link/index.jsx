@@ -1,3 +1,3 @@
-import NavLink from '@/components/ui/nav-link/nav-link';
+import NavLink from './nav-link';
 
 export default { NavLink };
