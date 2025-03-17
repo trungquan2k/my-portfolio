@@ -11,10 +11,10 @@ export default defineConfig({
     mimeTypes: {
       jsx: 'text/javascript',
     },
-    base: './',
+    base: '/',
   },
   build: {
-    outDir: 'dist/index.html', // Ensure this is correctly set
+    outDir: 'dist', // Ensure this is correctly set
   },
   resolve: {
     alias: {
