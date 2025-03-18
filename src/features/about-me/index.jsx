@@ -15,6 +15,17 @@ const AboutMe = () => {
       .then((data) => setData(data.data))
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
+
+  const onButtonClick = () => {
+    const pdfUrl = '/assets/pdf/mobille_hoangtrungquan_cv.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = '[Mobile Developer] Hoang Trung Quan.pdf'; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="bg-gray-100 pt-40 bg-white">
       <div>
@@ -33,7 +44,10 @@ const AboutMe = () => {
               dedicating my skills to contribute meaningfully to the growth and objectives of the
               organization.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+            <button
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+              onClick={onButtonClick}
+            >
               DOWNLOAD CV
             </button>
           </div>

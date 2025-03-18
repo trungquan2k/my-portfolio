@@ -77,6 +77,7 @@ const Header = () => {
       });
     };
   }, []);
+
   return (
     <header
       className={`z-10 fixed w-full bg-white ${
