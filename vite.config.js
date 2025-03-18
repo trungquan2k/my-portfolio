@@ -8,13 +8,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3001,
-    mimeTypes: {
-      jsx: 'text/javascript',
-    },
-    base: './',
-  },
-  build: {
-    outDir: 'dist', // Ensure this is correctly set
   },
   resolve: {
     alias: {
