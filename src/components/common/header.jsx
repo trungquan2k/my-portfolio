@@ -129,13 +129,14 @@ const Header = () => {
           }`}
         >
           <NavLink href="https://www.linkedin.com/in/hoang-trung-quan-434a002b5/">Linkedin</NavLink>
+          <p className="mx-2"></p>
           <NavLink href="https://github.com/trungquan2k">Github</NavLink>
-          <button
+          {/* <button
             onClick={switchDarkMode}
             className="hidden md:block text-gray-700 focus:outline-none pl-4"
           >
             {isDarkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
-          </button>
+          </button> */}
         </div>
       </div>
 

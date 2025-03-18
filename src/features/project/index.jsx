@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { Button } from 'antd';
 
 // Animation variants
 const slideVariants = {
@@ -18,7 +19,17 @@ const slideVariants = {
 
 const ProjectView = () => {
   const [services, setServices] = useState([]);
+  const [selectedService, setSelectedService] = useState(null);
 
+  const openModal = (service) => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    if (selectedService !== null) {
+      setSelectedService(null);
+    }
+  };
   useEffect(() => {
     fetch('/assets/models/project.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
@@ -27,7 +38,7 @@ const ProjectView = () => {
   }, []);
 
   return (
-    <div className="py-12">
+    <div className="py-12" onClick={() => closeModal()}>
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 underline">My Projects</h1>
       <div className="container mx-auto px-4">
         <Swiper
@@ -41,18 +52,18 @@ const ProjectView = () => {
           breakpoints={{
             // Responsive breakpoints
             320: {
-              slidesPerView: 1, // 1 slide on small screens
+              slidesPerView: 1,
             },
             768: {
-              slidesPerView: 2, // 2 slides on tablets
+              slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3, // 3 slides on desktops
+              slidesPerView: 3,
             },
           }}
         >
-          {services.map((service) => (
-            <SwiperSlide key={service.id}>
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
               <motion.div
                 variants={slideVariants}
                 initial="hidden"
@@ -65,6 +76,7 @@ const ProjectView = () => {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
+                onClick={() => openModal(service)}
               >
                 {/* Overlay to improve text readability */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
@@ -77,6 +89,32 @@ const ProjectView = () => {
           ))}
         </Swiper>
       </div>
+      {/* Modal */}
+      {selectedService && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg overflow-hidden max-w-2xl w-full">
+            <div className="group relative aspect-[16/9] overflow-hidden">
+              {' '}
+              <img
+                src={selectedService.image}
+                alt="Zoomable"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-2">{selectedService.title}</h2>
+              <p className="text-md">{selectedService.description}</p>
+
+              <Button
+                onClick={closeModal}
+                className="mt-4 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

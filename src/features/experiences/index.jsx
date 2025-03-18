@@ -40,19 +40,23 @@ const ExperienceView = () => {
               className="bg-white bg-opacity-75 rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow"
             >
               {/* Inline Title and Subtitle */}
-              <div className="flex items-center justify-between">
-                <div className="flex ">
-                  <h2 className="text-2xl font-bold text-gray-800">{item.title}</h2>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl font-bold text-blue-800 ml-4"
-                  >
-                    Link
-                  </a>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                <div className="flex flex-col sm:flex-row text-left">
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    {item.title}{' '}
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sm:text-xl font-bold text-blue-800 sm:ml-1 underline"
+                    >
+                      Link
+                    </a>
+                  </h2>
                 </div>
-                <p className="text-gray-600 ">{formatDateRange(item.startDate, item.endDate)}</p>
+                <p className="text-gray-600 mt-2 sm:mt-0">
+                  {formatDateRange(item.startDate, item.endDate)}
+                </p>
               </div>
               <p className="text-gray-600 text-justify  mb-4">{item.type}</p>
               <ul className="text-justify">

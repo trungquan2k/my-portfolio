@@ -4,7 +4,7 @@ import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 const ContactMeView = () => {
   return (
     <div>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto ">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-12 underline">Contact</h1>
         {/* Contact Information and Form in a Row */}
         <div className="flex flex-col lg:flex-row gap-8">
@@ -53,9 +53,9 @@ const ContactMeView = () => {
               <Button
                 type="primary"
                 className="w-40 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors h-10"
-                onClick={() => console.log()}
+                onClick={() => (window.location.href = 'https://www.facebook.com/quanht2k/')}
               >
-                SUBMIT
+                Book me now{' '}
               </Button>
             </form>
           </div>

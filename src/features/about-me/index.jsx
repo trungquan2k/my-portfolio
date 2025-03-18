@@ -8,6 +8,15 @@ const cardVariants = {
 };
 const AboutMe = () => {
   const [data, setData] = useState([]);
+  const [yearGraduation, setYearGraduation] = useState(new Date().getFullYear() - 2022);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setYearGraduation(new Date().getFullYear() - 2022);
+    }, 1000 * 60 * 60 * 24); // Update every day
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   useEffect(() => {
     fetch('/assets/models/about-me.json') // Path to the JSON file in the public folder
@@ -31,18 +40,19 @@ const AboutMe = () => {
       <div>
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Text Content */}
-          <div className="text-center lg:text-left lg:w-1/2">
+          <div className="text-center lg:text-left lg:w-1/1">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Hello, I'm <span className="text-blue-600">Hoang Trung Quan</span>
+              Hello, I’m <span className="text-blue-600">Hoang Trung Quan</span>
             </h1>
             <p className="text-lg lg:text-xl text-gray-600 mb-6">
-              I am eager to pursue a dynamic role within a forward-thinking company that offers a
-              mobile position, where I can blend my existing 2 years of experience with my passion
-              for continuous learning and self-improvement. I am enthusiastic about enhancing my IT
-              skills and knowledge in a real-world working environment, contributing my expertise to
-              the company`s success, and further developing into a valuable asset. I am committed to
-              dedicating my skills to contribute meaningfully to the growth and objectives of the
-              organization.
+              I am eager to pursue a dynamic and mobile role within an innovative company where I
+              can leverage my {yearGraduation - 1}+ years of experience while continuously expanding
+              my skill set. I am passionate about technology, adaptability, and problem-solving, and
+              I thrive in environments that challenge me to learn and grow. I am excited to apply my
+              expertise in a mobile capacity, contributing to the company’s success while developing
+              into a highly valuable and versatile asset. My commitment to professional growth and
+              dedication to excellence make me eager to take on new challenges and drive impactful
+              results.
             </p>
             <button
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
@@ -60,7 +70,7 @@ const AboutMe = () => {
           />
         </div>
         {/* Stats Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-12">
           {data.map((item, index) => (
             <motion.div
               key={index}

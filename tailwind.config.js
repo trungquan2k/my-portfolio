@@ -13,8 +13,8 @@ export default {
         'fade-in': 'fadeIn 1s ease-in-out',
       },
       fontSize: {
-        xl: '20px',
-        '2xl': '36px',
+        // xl: '20px',
+        // '2xl': '36px',
       },
       colors: {
         primary: '#1c1c22',
