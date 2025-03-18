@@ -16,7 +16,7 @@ const ExperienceView = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/src/assets/models/experiences.json') // Path to the JSON file in the public folder
+    fetch('/assets/models/experiences.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
       .then((data) => setData(data.data))
       .catch((error) => console.error('Error loading JSON:', error));

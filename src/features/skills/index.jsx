@@ -17,7 +17,7 @@ const SkillView = () => {
   const [skills, setSkills] = useState({ technical_skills: [], sort_skills: [] });
 
   useEffect(() => {
-    fetch('/src/assets/models/technologies.json') // Path to the JSON file in the public folder
+    fetch('/assets/models/technologies.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
       .then((data) => setSkills(data))
       .catch((error) => console.error('Error loading JSON:', error));

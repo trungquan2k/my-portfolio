@@ -20,7 +20,7 @@ const ProjectView = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch('/src/assets/models/project.json') // Path to the JSON file in the public folder
+    fetch('/assets/models/project.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
       .then((data) => setServices(data.data))
       .catch((error) => console.error('Error loading JSON:', error));

@@ -10,7 +10,7 @@ const AboutMe = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/src/assets/models/about-me.json') // Path to the JSON file in the public folder
+    fetch('/assets/models/about-me.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
       .then((data) => setData(data.data))
       .catch((error) => console.error('Error loading JSON:', error));
@@ -40,7 +40,7 @@ const AboutMe = () => {
 
           {/* Image */}
           <img
-            src="/src/assets/images/my_profile.png"
+            src="/assets/images/my_profile.png"
             className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 transition-all duration-300 ease-in-out rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0"
             alt="My profile"
           />
