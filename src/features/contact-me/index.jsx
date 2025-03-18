@@ -9,7 +9,7 @@ const ContactMeView = () => {
         {/* Contact Information and Form in a Row */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Contact Information */}
-          <div className="lg:w-1/2 rounded-lg p-8">
+          <div className="lg:w-1/2 rounded-lg pt-8">
             <div className="space-y-8">
               {/* Call Us */}
               <div>

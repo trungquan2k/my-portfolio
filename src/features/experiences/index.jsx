@@ -48,7 +48,7 @@ const ExperienceView = () => {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="sm:text-xl font-bold text-blue-800 sm:ml-1 underline"
+                      className="sm:text-xl font-bold text-blue-800 sm:ml underline"
                     >
                       Link
                     </a>

@@ -98,9 +98,9 @@ const Header = () => {
 
           {/* Hamburger Icon (Mobile Only) */}
           <div className="md:hidden space-x-4">
-            <button onClick={switchDarkMode} className="text-gray-700 focus:outline-none">
+            {/* <button onClick={switchDarkMode} className="text-gray-700 focus:outline-none">
               {isDarkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
-            </button>
+            </button> */}
 
             <button onClick={toggleModal} className="text-gray-700 focus:outline-none">
               <Bars3Icon className="h-6 w-6" />
