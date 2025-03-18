@@ -3,27 +3,44 @@
     {
       "title": "IOT Solution",
       "description": "Remote control home appliance control\nCheck the room's environmental information with the built-in sensor\nCooperation with Gramo products\nIt is equipped with various other functions that are convenient for daily life.",
-      "image": "/assets/images/iot_project.png"
+      "image": "/assets/images/iot_project.png",
+      "link": ""
+    },
+    {
+      "title": "Social Media ",
+      "description": "Insida is a platform that brings together real estate professionals and enthusiasts, creating a space to explore, share, and connect. It features captivating property photos, videos, and virtual tours, making it easier to showcase and discover properties.",
+      "image": "/assets/images/insida_project.png",
+      "link": ""
+    },
+    {
+      "title": "SparkFix",
+      "description": "SparkFix is a platform that connects qualified handymen with homeowners in need of repair and maintenance services.SparkFix offers multiple authentication options, Google Maps integration for location-based services, secure digital payment, and advanced filtering and sorting",
+      "image": "/assets/images/sparkfix_project.png",
+      "link": ""
     },
     {
       "title": "Green Check App",
       "description": "Farm management software QR code for traceability A network system connecting experts for each type of agricultural product.",
-      "image": "/assets/images/green_check_project.png"
+      "image": "/assets/images/green_check_project.png",
+      "link": ""
     },
     {
       "title": "Car Auto Tracking",
       "description": "Control orders in auto and motorbike repair shops. Helps window owners make monthly statistics on spending accounts",
-      "image": "/assets/images/hero_auto_tracking.png"
+      "image": "/assets/images/hero_auto_tracking.png",
+      "link": ""
     },
     {
       "title": "Traveling",
       "description": "Web site for traveling.",
-      "image": "/assets/images/viator_project.png"
+      "image": "/assets/images/viator_project.png",
+      "link": ""
     },
     {
       "title": "E-commerce",
       "description": "Application for store sell product.",
-      "image": "/assets/images/green_agri.png"
+      "image": "/assets/images/green_agri.png",
+      "link": ""
     }
   ]
 }
