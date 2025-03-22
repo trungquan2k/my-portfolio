@@ -21,6 +21,7 @@
     "dayjs": "^1.11.13",
     "i18next": "23.11.5",
     "json-loader": "^0.5.7",
+    "lodash": "^4.17.21",
     "lucide-react": "0.400.0",
     "motion": "^12.5.0",
     "prop-types": "15.8.1",
