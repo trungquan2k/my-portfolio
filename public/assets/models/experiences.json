@@ -12,12 +12,12 @@
         "Social media, E-commerce"
       ],
       "description": [
-        "Configure and set up the app environment with multiple flavors.",
-        "Implement state management using GetX, Provider, and Bloc/Cubit",
-        "Integrate Firebase for push notifications",
-        "Develop and deploy service app link using nextjs + netlify",
-        "Manage internal builds and release applications on app stores (Google Play Store, Apple App Store)",
-        "Collaborate with the team to develop the core app features."
+        "Configuring and setting up the app environment with multiple flavors.",
+        "Implementing state management using GetX, Provider, and Bloc/Cubit.",
+        "Integrating Firebase for push notifications.",
+        "Developing and deploying service app links using Next.js + Netlify.",
+        "Managing internal builds and releasing applications on app stores (Google Play Store, Apple App Store).",
+        "Collaborating with the team to develop core app features."
       ]
     },
     {
@@ -31,8 +31,8 @@
         "IOT solution"
       ],
       "description": [
-        "Combine Flutter with native code (Kotlin) to build and release call video, SDK Chime, NFC features with Flutter code.",
-        "Involved in ui graph sensor optimization with big data"
+        "Combining Flutter with native code (Kotlin) to build and release call video, SDK Chime, and NFC features.",
+        "Optimizing UI graph sensor with big data."
       ]
     },
     {
@@ -47,10 +47,10 @@
         "E-commerce"
       ],
       "description": [
-        "Implement state management using GetX, and Bloc/Cubit",
-        "Integrate Firebase for push notifications",
-        "Responsible for building and release applications on app stores (Google Play Store, Apple App Store)",
-        "Joining with internal team config and release app"
+        "Implementing state management using GetX and Bloc/Cubit.",
+        "Integrating Firebase for push notifications.",
+        "Building and releasing applications on app stores (Google Play Store, Apple App Store).",
+        "Joining with the internal team to develop features."
       ]
     },
     {
@@ -65,10 +65,10 @@
         "Javascript Foundation"
       ],
       "description": [
-        "Joining internship programming in 2 months",
-        "Participating in the Viator project about travel as Full stack in 3 months",
-        "Working with Redux, Typescript, Java.",
-        "Working with agile scrum methodology."
+        "Joining an internship in programming for 2 months.",
+        "Participating in the Viator project about travel as a Full-stack developer for 3 months.",
+        "Working with Redux, TypeScript, and Java.",
+        "Working with the Agile Scrum methodology."
       ]
     },
     {
@@ -83,9 +83,9 @@
         "HR management project"
       ],
       "description": [
-        "Creating API , database using Laravel framework",
-        "Developing Ui depend requirement of leader for HR manager",
-        "Making admin page for HR manager using Vuejs (CRUD feature)"
+        "Creating APIs and databases using the Laravel framework.",
+        "Developing UI based on the leader's requirements for the HR manager.",
+        "Creating an admin page for the HR manager using Vue.js with CRUD features."
       ]
     }
   ]

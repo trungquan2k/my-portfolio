@@ -17,7 +17,7 @@ const MainLayout = () => {
         <section id="about-me">
           <AboutMe />
         </section>
-        <section id="experience">
+        <section id="my-experience">
           <ExperienceView />
         </section>
         <section id="skills">

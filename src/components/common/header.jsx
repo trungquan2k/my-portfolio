@@ -32,7 +32,7 @@ const Header = () => {
   const menus = useMemo(
     () => [
       { label: 'About me', link: '#about-me', key: 'about-me' },
-      { label: 'Experience', link: '#experience', key: 'experience' },
+      { label: 'Experience', link: '#my-experience', key: 'my-experience' },
       { label: 'Skills', link: '#skills', key: 'skills' },
       { label: 'Project', link: '#project', key: 'project' },
       { label: 'Contact me', link: '#contact-me', key: 'contact-me' },
@@ -63,6 +63,7 @@ const Header = () => {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        console.log(entry.target.id, entry.isIntersecting, entry.intersectionRatio);
         if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
           setActiveTab(entry.target.id);
         }
@@ -78,7 +79,7 @@ const Header = () => {
         observer.unobserve(section);
       });
     };
-  }, []);
+  }, [activeTab]);
 
   return (
     <header

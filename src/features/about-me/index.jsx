@@ -41,10 +41,10 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Text Content */}
           <div className="text-center lg:text-left lg:w-1/1">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10">
               Hello, I’m <span className="text-blue-600">Hoang Trung Quan</span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-600 mb-6">
+            <p className="text-lg lg:text-xl text-gray-600 mb-10">
               I am eager to pursue a dynamic and mobile role within an innovative company where I
               can leverage my {yearGraduation - 1}+ years of experience while continuously expanding
               my skill set. I am passionate about technology, adaptability, and problem-solving, and
@@ -55,7 +55,7 @@ const AboutMe = () => {
               results.
             </p>
             <button
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+              className="bg-blue-600  text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
               onClick={onButtonClick}
             >
               DOWNLOAD CV
@@ -70,7 +70,7 @@ const AboutMe = () => {
           />
         </div>
         {/* Stats Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-12 mb-10">
           {data.map((item, index) => (
             <motion.div
               key={index}
