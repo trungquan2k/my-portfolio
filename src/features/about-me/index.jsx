@@ -1,13 +1,8 @@
-import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.05, rotate: -2, transition: { duration: 0.3 } },
-};
+import { FaDownload } from 'react-icons/fa';
+import Paragraph from '../../components/ui/text_custom';
+import { AppButton } from '../../components/ui/button-custom';
 const AboutMe = () => {
-  const [data, setData] = useState([]);
   const [yearGraduation, setYearGraduation] = useState(new Date().getFullYear() - 2022);
 
   useEffect(() => {
@@ -16,13 +11,6 @@ const AboutMe = () => {
     }, 1000 * 60 * 60 * 24); // Update every day
 
     return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
-
-  useEffect(() => {
-    fetch('/assets/models/about-me.json') // Path to the JSON file in the public folder
-      .then((response) => response.json())
-      .then((data) => setData(data.data))
-      .catch((error) => console.error('Error loading JSON:', error));
   }, []);
 
   const onButtonClick = () => {
@@ -36,56 +24,36 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="bg-gray-100 pt-40 bg-white">
-      <div>
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Text Content */}
-          <div className="text-center lg:text-left lg:w-1/1">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10">
-              Hello, I’m <span className="text-blue-600">Hoang Trung Quan</span>
-            </h1>
-            <p className="text-lg lg:text-xl text-gray-600 mb-10">
-              I am eager to pursue a dynamic and mobile role within an innovative company where I
-              can leverage my {yearGraduation - 1}+ years of experience while continuously expanding
-              my skill set. I am passionate about technology, adaptability, and problem-solving, and
-              I thrive in environments that challenge me to learn and grow. I am excited to apply my
-              expertise in a mobile capacity, contributing to the company’s success while developing
-              into a highly valuable and versatile asset. My commitment to professional growth and
-              dedication to excellence make me eager to take on new challenges and drive impactful
-              results.
-            </p>
-            <button
-              className="bg-blue-600  text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
-              onClick={onButtonClick}
-            >
-              DOWNLOAD CV
-            </button>
-          </div>
+    <div>
+      <div className="flex flex-col lg:flex-row items-center justify-between">
+        {/* Text Content */}
+        <div className="text-center lg:text-left lg:w-1/1">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10">
+            I’m <span className="text-blue-600">Hoang Trung Quan</span>
+          </h1>
+          <Paragraph align="start" className="mb-4">
+            I’m a passionate software developer with expertise in mobile and web development. With
+            {yearGraduation - 1}+ years of experience, I’ve worked on various projects ranging from
+            enterprise applications to innovative startups. I specialize in creating user-centric
+            solutions that combine beautiful design with efficient functionality.
+          </Paragraph>
+          <Paragraph align="start" className="mb-10">
+            My journey in technology has equipped me with a deep understanding of different
+            platforms and frameworks, allowing me to choose the right tools for each unique project
+            requirement.
+          </Paragraph>
+          <AppButton onClick={onButtonClick}>
+            <FaDownload className="text-xl text-white-600 mr-4" />
+            DOWNLOAD CV
+          </AppButton>
+        </div>
 
-          {/* Image */}
-          <img
-            src="/assets/images/my_profile.png"
-            className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 transition-all duration-300 ease-in-out rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0"
-            alt="My profile"
-          />
-        </div>
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-12 mb-10">
-          {data.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover" // Apply hover animation
-              viewport={{ once: true, amount: 0.5 }}
-              className="bg-gray-100 p-6 rounded-lg shadow-md transition-shadow cursor-pointer"
-            >
-              <h2 className="text-4xl font-bold text-blue-600">{item.value}</h2>
-              <p className="text-gray-600">{item.key}</p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Image */}
+        <img
+          src="/assets/images/my_profile.png"
+          className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 transition-all duration-300 ease-in-out rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0"
+          alt="My profile"
+        />
       </div>
     </div>
   );

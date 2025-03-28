@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const ExpanedText = ({ text, maxLines = 3 }) => {
+const ExpandedText = ({ text, maxLines = 3 }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -22,8 +22,8 @@ const ExpanedText = ({ text, maxLines = 3 }) => {
     </div>
   );
 };
-ExpanedText.propTypes = {
+ExpandedText.propTypes = {
   text: PropTypes.string.isRequired,
   maxLines: PropTypes.number,
 };
-export default ExpanedText;
+export default ExpandedText;

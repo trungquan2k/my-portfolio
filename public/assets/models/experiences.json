@@ -1,7 +1,8 @@
 {
   "data": [
     {
-      "title": "Mobile Engineer at SparkMinds",
+      "title": "Mobile Engineer",
+      "company": "SparkMinds Company",
       "type": "Full-time",
       "startDate": "2023-08-01T00:00:00Z",
       "endDate": "Now",
@@ -21,7 +22,8 @@
       ]
     },
     {
-      "title": "Mobile Engineer at Voyager",
+      "title": "Flutter & Android Engineer",
+      "company": "Voyager Inc.",
       "type": "Part-time",
       "startDate": "2023-05-01T00:00:00Z",
       "language": "Flutter, Kotlin",
@@ -36,7 +38,8 @@
       ]
     },
     {
-      "title": "Mobile Engineer at GreenAgri",
+      "title": "Mobile Engineer",
+      "company": "GreenAgri Inc.",
       "type": "Full-time",
       "startDate": "2022-08-01T00:00:00Z",
       "language": "Flutter",
@@ -54,7 +57,8 @@
       ]
     },
     {
-      "title": "Full-stack internship at Positive Thinking",
+      "title": "Full-stack internship",
+      "company": "Positive Thinking Company.",
       "type": "Full-time",
       "startDate": "2022-04-01T00:00:00Z",
       "language": "Javascript, Java",
@@ -72,7 +76,8 @@
       ]
     },
     {
-      "title": "Mobile Internship at Atoma",
+      "title": "Software Engineering Intern (Full-Stack & Mobile)",
+      "company": "Atoma Company",
       "type": "Full-time",
       "startDate": "2021-07-01T00:00:00Z",
       "language": "Flutter, Vuejs, Laravel",

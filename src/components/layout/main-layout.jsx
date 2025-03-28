@@ -7,17 +7,19 @@ import ExperienceView from '../../features/experiences';
 import SkillsView from '../../features/skills';
 import ProjectView from '../../features/project';
 import ContactMeView from '../../features/contact-me';
+import HomeView from '../../features/home';
 const MainLayout = () => {
   const { loading } = useSelector((state) => state.global);
 
   return (
-    <div className="relative w-full animate-fade-in bg-white">
+    <div className="relative w-full animate-fade-in bg-[#F9FAFB]">
       <Header />
-      <div className=" w-full main-content container mx-auto px-6 z-0">
+      <div className="w-full main-content container mx-auto px-6 z-0">
         <section id="about-me">
+          <HomeView />
           <AboutMe />
         </section>
-        <section id="my-experience">
+        <section id="experience">
           <ExperienceView />
         </section>
         <section id="skills">

@@ -1,17 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
+import Paragraph, { AppTextAlign, AppTextVariant } from '../../components/ui/text_custom';
+import { cardVariantsMainSkill, cardVariantsSortSkill } from './skill.types';
 // Animation variants
-const cardVariantsMainSkill = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.05, rotate: 2, transition: { duration: 0.3 } },
-};
-const cardVariantsSortSkill = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.05, rotate: -2, transition: { duration: 0.3 } },
-};
 
 const SkillView = () => {
   const [skills, setSkills] = useState({ technical_skills: [], sort_skills: [] });
@@ -27,9 +18,15 @@ const SkillView = () => {
     <div className=" py-12 bg-white">
       <div className="container mx-auto px-4">
         {/* Main Skills Section */}
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 underline">
+
+        <Paragraph
+          variant={AppTextVariant.H1}
+          align={AppTextAlign.START}
+          mb={10}
+          className="underline"
+        >
           Technical Skills
-        </h1>
+        </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.technical_skills.map((skill, index) => (
             <motion.div

@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Button } from 'antd';
+import Paragraph, { AppTextAlign, AppTextVariant } from '../../components/ui/text_custom';
 
 // Animation variants
 const slideVariants = {
@@ -39,7 +40,14 @@ const ProjectView = () => {
 
   return (
     <div className="py-12" onClick={() => closeModal()}>
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 underline">My Projects</h1>
+      <Paragraph
+        variant={AppTextVariant.H1}
+        align={AppTextAlign.START}
+        mb={10}
+        className="underline"
+      >
+        Projects
+      </Paragraph>
       <div className="container mx-auto px-4">
         <Swiper
           slidesPerView={3} // Number of slides visible at once
@@ -82,7 +90,7 @@ const ProjectView = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
                 <div className="relative z-10 text-white p-6">
                   <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
-                  <p className="text-lg">{service.description}</p>
+                  <p className="text-lg line-clamp-2">{service.description}</p>
                 </div>
               </motion.div>
             </SwiperSlide>

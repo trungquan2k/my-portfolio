@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { formatDateRange } from '/src/utils/date';
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: {
-    scale: 1.05,
-    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
-    transition: { duration: 0.3 },
-  },
-};
+import { cardVariants } from './exp.type';
+import Paragraph, {
+  AppTextAlign,
+  AppTextColor,
+  AppTextVariant,
+} from '../../components/ui/text_custom';
+import { FaShareSquare } from 'react-icons/fa';
 
 const ExperienceView = () => {
   const [data, setData] = useState([]);
@@ -23,11 +20,16 @@ const ExperienceView = () => {
   }, []);
 
   return (
-    <div className=" py-12">
-      <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12 underline">
-          My Experience
-        </h1>
+    <div className="container pt-24 flex flex-col justify-center">
+      <div className="text-start w-full">
+        <Paragraph
+          variant={AppTextVariant.H1}
+          align={AppTextAlign.START}
+          mb={10}
+          className="underline"
+        >
+          Experiences
+        </Paragraph>
         <div className="space-y-8">
           {data.map((item, index) => (
             <motion.div
@@ -42,30 +44,37 @@ const ExperienceView = () => {
               {/* Inline Title and Subtitle */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
                 <div className="flex flex-col sm:flex-row text-left">
-                  <h2 className="text-2xl font-bold text-gray-800">
-                    {item.title}{' '}
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sm:text-xl font-bold text-blue-800 sm:ml underline"
-                    >
-                      Link
-                    </a>
-                  </h2>
+                  <h2 className="text-2xl font-bold text-gray-800">{item.title} </h2>
                 </div>
                 <p className="text-gray-600 mt-2 sm:mt-0">
                   {formatDateRange(item.startDate, item.endDate)}
                 </p>
               </div>
+              <Paragraph
+                variant={AppTextVariant.P}
+                align={AppTextAlign.START}
+                color={AppTextColor.LIGHT}
+                className="italic"
+              >
+                {item.company}
+              </Paragraph>
               <p className="text-gray-600 text-justify  mb-4">{item.type}</p>
-              <ul className="text-justify">
+              <ul className="text-justify pb-3">
                 {item.description.map((desc, i) => (
-                  <li key={i} className="text-xl">
+                  <li key={i} className="text-md">
                     {desc}
                   </li>
                 ))}
               </ul>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sm:text-sm text-blue-800 sm:ml flex items-center "
+              >
+                View Reference
+                <FaShareSquare className="text-sm text-white-600 ml-2" />
+              </a>
             </motion.div>
           ))}
         </div>

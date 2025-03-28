@@ -1,11 +1,19 @@
 import { Button } from 'antd';
 import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import Paragraph, { AppTextAlign, AppTextVariant } from '../../components/ui/text_custom';
 
 const ContactMeView = () => {
   return (
     <div>
       <div className="container mx-auto ">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12 underline">Contact</h1>
+        <Paragraph
+          variant={AppTextVariant.H1}
+          align={AppTextAlign.START}
+          mb={10}
+          className="underline"
+        >
+          Contact Me
+        </Paragraph>
         {/* Contact Information and Form in a Row */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Contact Information */}
@@ -13,20 +21,26 @@ const ContactMeView = () => {
             <div className="space-y-8">
               {/* Call Us */}
               <div>
+                <Paragraph
+                  variant={AppTextVariant.H3}
+                  align={AppTextAlign.START}
+                  className="italic"
+                  mb={4}
+                >
+                  Get in Touch
+                </Paragraph>
                 <div className="flex items-center mb-4">
                   <FaPhone className="text-2xl text-blue-600 mr-4" />
-                  <h2 className="text-xl font-bold text-gray-800">Call me</h2>
+                  <p className="text-gray-600 text-justify">(+84) 355 739 816</p>
                 </div>
-                <p className="text-gray-600 text-justify">(+84) 355 739 816</p>
               </div>
 
               {/* Location */}
               <div>
                 <div className="flex items-center mb-4">
                   <FaMapMarkerAlt className="text-2xl text-blue-600 mr-4" />
-                  <h2 className="text-xl font-bold text-gray-800">Location</h2>
+                  <p className="text-gray-600 text-justify">Phường 15, Tân Bình, Hồ Chí Minh</p>
                 </div>
-                <p className="text-gray-600 text-justify">Phường 15, Tân Bình, Hồ Chí Minh</p>
               </div>
             </div>
           </div>
