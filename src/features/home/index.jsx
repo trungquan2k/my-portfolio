@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Paragraph, {
   AppTextAlign,
   AppTextColor,
@@ -27,16 +27,16 @@ const HomeView = () => {
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
 
-  const handleScroll = useCallback((event, targetId) => {
+  const handleScroll = useCallback((event) => {
     event.preventDefault();
-    const section = document.querySelector(targetId);
+    const section = document.querySelector('#project');
 
     if (section) {
       window.scrollTo({
         top: section.offsetTop - 80,
         behavior: 'smooth',
       });
-      window.history.pushState(null, null, targetId);
+      window.history.pushState(null, null, '#project');
     }
   }, []);
   return (
@@ -62,7 +62,7 @@ const HomeView = () => {
         <AppButton
           variants={ButtonVariants.PRIMARY}
           className="mb-10"
-          onClick={(e) => handleScroll(e, '#project')}
+          onClick={(e) => handleScroll(e)}
         >
           View Projects
         </AppButton>
