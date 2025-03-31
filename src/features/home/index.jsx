@@ -26,6 +26,19 @@ const HomeView = () => {
       .then((data) => setData(data.data))
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
+
+  const handleScroll = useCallback((event, targetId) => {
+    event.preventDefault();
+    const section = document.querySelector(targetId);
+
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: 'smooth',
+      });
+      window.history.pushState(null, null, targetId);
+    }
+  }, []);
   return (
     <div className="container pt-40 pb-24  flex flex-col justify-center ">
       <div className="text-start w-full">
@@ -46,7 +59,11 @@ const HomeView = () => {
           {yearGraduation - 1} years of expertise in mobile application.
         </Paragraph>
 
-        <AppButton variants={ButtonVariants.PRIMARY} className="mb-10">
+        <AppButton
+          variants={ButtonVariants.PRIMARY}
+          className="mb-10"
+          onClick={(e) => handleScroll(e, '#project')}
+        >
           View Projects
         </AppButton>
 
