@@ -47,7 +47,14 @@ const SkillView = () => {
         </div>
 
         {/* Sort Skills Section */}
-        <h1 className="text-4xl font-bold text-center text-gray-800 my-8 underline">Sort Skills</h1>
+        <Paragraph
+          variant={AppTextVariant.H1}
+          align={AppTextAlign.START}
+          mb={10}
+          className="underline my-8"
+        >
+          Sort Skills
+        </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.sort_skills.map((skill, index) => (
             <motion.div
