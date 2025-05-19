@@ -1,5 +1,4 @@
-import { Button } from 'antd';
-import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaMailBulk } from 'react-icons/fa';
 import Paragraph, { AppTextAlign, AppTextVariant } from '../../components/ui/text_custom';
 
 const ContactMeView = () => {
@@ -38,40 +37,11 @@ const ContactMeView = () => {
               {/* Location */}
               <div>
                 <div className="flex items-center mb-4">
-                  <FaMapMarkerAlt className="text-2xl text-blue-600 mr-4" />
-                  <p className="text-gray-600 text-justify">Phường 15, Tân Bình, Hồ Chí Minh</p>
+                  <FaMailBulk className="text-2xl text-blue-600 mr-4" />
+                  <p className="text-gray-600 text-justify">qhoang.devvietnam@gmail.com</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:w-1/2 rounded-lg  p-8">
-            <form>
-              <div className="mb-8">
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-2 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div className="mb-8">
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-2 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
-                  placeholder="Your Email"
-                />
-              </div>
-              <Button
-                type="primary"
-                className="w-40 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors h-10"
-                onClick={() => (window.location.href = 'https://www.linkedin.com/in/quanht2k/')}
-              >
-                Book me now{' '}
-              </Button>
-            </form>
           </div>
         </div>
       </div>
