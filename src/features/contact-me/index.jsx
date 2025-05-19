@@ -67,7 +67,7 @@ const ContactMeView = () => {
               <Button
                 type="primary"
                 className="w-40 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors h-10"
-                onClick={() => (window.location.href = 'https://www.facebook.com/quanht2k/')}
+                onClick={() => (window.location.href = 'https://www.linkedin.com/in/quanht2k/')}
               >
                 Book me now{' '}
               </Button>
