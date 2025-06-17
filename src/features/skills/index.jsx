@@ -15,8 +15,8 @@ const SkillView = () => {
   }, []);
 
   return (
-    <div className=" py-12 bg-white">
-      <div className="container mx-auto px-4">
+    <div>
+      <div className="container mx-auto py-12">
         {/* Main Skills Section */}
 
         <Paragraph

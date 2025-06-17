@@ -39,7 +39,7 @@ const ProjectView = () => {
   }, []);
 
   return (
-    <div className="py-12" onClick={() => closeModal()}>
+    <div onClick={() => closeModal()}>
       <Paragraph
         variant={AppTextVariant.H1}
         align={AppTextAlign.START}

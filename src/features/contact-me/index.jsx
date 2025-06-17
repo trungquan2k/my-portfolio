@@ -4,7 +4,7 @@ import Paragraph, { AppTextAlign, AppTextVariant } from '../../components/ui/tex
 const ContactMeView = () => {
   return (
     <div>
-      <div className="container mx-auto ">
+      <div className="container mx-auto pt-12">
         <Paragraph
           variant={AppTextVariant.H1}
           align={AppTextAlign.START}
