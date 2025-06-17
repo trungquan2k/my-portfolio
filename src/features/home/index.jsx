@@ -6,6 +6,7 @@ import Paragraph, {
   AppTextVariant,
   ParagraphSizes,
 } from '../../components/ui/text_custom';
+import TextScroll from '../../components/ui/text-scroll';
 import { AppButton, ButtonVariants } from '../../components/ui/button-custom';
 import { cardVariants } from './home.types';
 
@@ -50,9 +51,10 @@ const HomeView = () => {
         >
           Mobile Developer
         </Paragraph>
-        <Paragraph variant={AppTextVariant.H4} align={AppTextAlign.START} mb={4}>
-          Flutter + React Native
-        </Paragraph>
+        <TextScroll></TextScroll>
+        {/* <Paragraph variant={AppTextVariant.H4} align={AppTextAlign.START} mb={4}>
+          Flutter, Android, React Native
+        </Paragraph> */}
 
         <Paragraph align="start" className="max-w-xl pb-10">
           Passionate about creating beautiful and functional digital experiences with over +

@@ -7,9 +7,9 @@ const TabLink = ({ href, children, className, isActive, onClick }) => {
       href={href} // Keep href for accessibility
       onClick={onClick} // Trigger smooth scroll
       className={clsx(
-        'text-xl text-gray-700 cursor-pointer',
-        { 'border-b-2 border-blue-500': isActive }, // Active state styling
         className,
+        'text-xl cursor-pointer',
+        { 'border-b-2 border-blue-500': isActive }, // Active state styling
       )}
     >
       {children}

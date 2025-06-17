@@ -72,7 +72,7 @@ const ExperienceView = () => {
                 rel="noopener noreferrer"
                 className="sm:text-sm text-blue-800 sm:ml flex items-center "
               >
-                View Reference
+                {item.titleRefer}
                 <FaShareSquare className="text-sm text-white-600 ml-2" />
               </a>
             </motion.div>

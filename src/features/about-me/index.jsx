@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaDownload } from 'react-icons/fa';
 import Paragraph from '../../components/ui/text_custom';
-import { AppButton } from '../../components/ui/button-custom';
+import { AppButton } from '@/components/ui/button-custom';
 const AboutMe = () => {
   const [yearGraduation, setYearGraduation] = useState(new Date().getFullYear() - 2022);
 
@@ -14,7 +14,7 @@ const AboutMe = () => {
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/cv_quandev_mobile.pdf';
+    const pdfUrl = '/assets/pdf/cv_quandev.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = '[Mobile Developer] Hoang Trung Quan.pdf'; // specify the filename
@@ -50,7 +50,7 @@ const AboutMe = () => {
 
         {/* Image */}
         <img
-          src="/assets/images/my_profile.png"
+          src="/assets/images/hoangtrungquan.jpg"
           className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 transition-all duration-300 ease-in-out rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0"
           alt="My profile"
         />

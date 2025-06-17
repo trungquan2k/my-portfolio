@@ -8,6 +8,7 @@
       "endDate": "Now",
       "language": "Flutter, Kotlin, React Native",
       "link": "https://moneyspace.net/",
+      "titleRefer": "View Live",
       "purpose": [
         "Money transfers and bank transactions",
         "Social media, E-commerce"
@@ -28,13 +29,19 @@
       "startDate": "2023-05-01T00:00:00Z",
       "language": "Flutter, Kotlin",
       "link": "https://appadvice.com/app/9dots/6468874478",
+      "titleRefer": "View Live",
       "endDate": "2023-08-01T00:00:00Z",
       "purpose": [
         "IOT solution"
       ],
       "description": [
-        "Combining Flutter with native code (Kotlin) to build and release call video, SDK Chime, and NFC features.",
-        "Optimizing UI graph sensor with big data."
+        "Developed a cross-platform mobile app using Flutter to interface with IoT devices.",
+        "Integrated native Android (Kotlin) code into Flutter via platform channels to enable real-time video calling between the IoT device and mobile (iPhone/Android).",
+        "Built dynamic real-time charts (occupancy detection) synced from IoT sensors, optimized with stream-based data updates using WebSocket.",
+        "Implemented NFC-based login authentication via chip-embedded cards.",
+        "Built push notification system to deliver alerts (e.g., intrusion detection, weather updates) using Firebase Cloud Messaging.",
+        "Utilized GraphQL for efficient and structured device communication and data querying.",
+        "Supported features like live weather updates, intruder alerts, and user presence detection through sensor integration."
       ]
     },
     {
@@ -50,10 +57,10 @@
         "E-commerce"
       ],
       "description": [
-        "Implementing state management using GetX and Bloc/Cubit.",
-        "Integrating Firebase for push notifications.",
-        "Building and releasing applications on app stores (Google Play Store, Apple App Store).",
-        "Joining with the internal team to develop features."
+        "Designed and managed app state using GetX for lightweight UI interaction and Bloc/Cubit for modular business logic control.",
+        "Integrated Firebase Cloud Messaging to support real-time push notifications, background handling, and platform-specific permission flows.",
+        "Deployed applications to Google Play Store and Apple App Store, managing signing, CI/CD pipelines, and store submission processes.",
+        "Worked closely with internal teams to develop, test, and optimize key features in a cross-platform IoT application."
       ]
     },
     {
@@ -64,15 +71,16 @@
       "language": "Javascript, Java",
       "endDate": "2022-08-01T00:00:00Z",
       "link": "https://www.viator.com/",
+      "titleRefer": "View Live",
       "purpose": [
         "Traveling",
         "Javascript Foundation"
       ],
       "description": [
-        "Joining an internship in programming for 2 months.",
-        "Participating in the Viator project about travel as a Full-stack developer for 3 months.",
-        "Working with Redux, TypeScript, and Java.",
-        "Working with the Agile Scrum methodology."
+        "Completed a 2-month programming internship, gaining foundational experience in software development.",
+        "Participated in the Viator travel web project as a Full-stack Developer for 3 months, contributing to both frontend and backend features.",
+        "Worked with modern web technologies including Redux, TypeScript (frontend), and Java (backend).",
+        "Followed the Agile Scrum methodology, attending daily standups, sprint planning, and regular reviews."
       ]
     },
     {
@@ -82,15 +90,17 @@
       "startDate": "2021-07-01T00:00:00Z",
       "language": "Flutter, Vuejs, Laravel",
       "link": "https://github.com/trungquan2k/HR-MANAGERMENT",
+      "titleRefer": "Source Code",
       "endDate": "2021-09-01T00:00:00Z",
       "purpose": [
         "Practice personal project",
         "HR management project"
       ],
       "description": [
-        "Creating APIs and databases using the Laravel framework.",
-        "Developing UI based on the leader's requirements for the HR manager.",
-        "Creating an admin page for the HR manager using Vue.js with CRUD features."
+        "Completed a 2-month internship focused on building a Flutter mobile application with user authentication and CRUD operations.",
+        "Designed and implemented a demo product to manage user accounts, including login, authentication, and user CRUD features.",
+        "Studied and applied Vue.js to build a responsive admin dashboard for HR managers with full CRUD capabilities.",
+        "Created RESTful APIs and database schema using the Laravel framework to support the frontend systems."
       ]
     }
   ]

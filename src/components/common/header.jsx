@@ -141,6 +141,8 @@ const Header = () => {
           <NavLink href="https://www.linkedin.com/in/hoang-trung-quan-434a002b5/">Linkedin</NavLink>
           <p className="mx-2"></p>
           <NavLink href="https://github.com/trungquan2k">Github</NavLink>
+          <p className="mx-2"></p>
+          <NavLink href="https://zalo.me/0355739816">Zalo</NavLink>
         </div>
       </div>
 

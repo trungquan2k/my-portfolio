@@ -1,5 +1,5 @@
 {
-  "name": "coffee-management",
+  "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "clsx": "2.1.1",
     "date-format": "4.0.14",
     "dayjs": "^1.11.13",
+    "framer-motion": "^12.18.1",
     "i18next": "23.11.5",
     "json-loader": "^0.5.7",
     "lodash": "^4.17.21",
