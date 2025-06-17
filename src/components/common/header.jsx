@@ -138,11 +138,21 @@ const Header = () => {
             hideNav ? '-translate-y-5 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
           }`}
         >
-          <NavLink href="https://www.linkedin.com/in/hoang-trung-quan-434a002b5/">Linkedin</NavLink>
+          <NavLink
+            onClick={() =>
+              window.open('https://www.linkedin.com/in/hoang-trung-quan-434a002b5/', '_blank')
+            }
+          >
+            Linkedin
+          </NavLink>
           <p className="mx-2"></p>
-          <NavLink href="https://github.com/trungquan2k">Github</NavLink>
+          <NavLink onClick={() => window.open('https://github.com/trungquan2k', '_blank')}>
+            Github
+          </NavLink>
           <p className="mx-2"></p>
-          <NavLink href="https://zalo.me/0355739816">Zalo</NavLink>
+          <NavLink onClick={() => window.open('https://zalo.me/0355739816', '_blank')}>
+            Zalo
+          </NavLink>
         </div>
       </div>
 

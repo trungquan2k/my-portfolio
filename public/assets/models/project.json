@@ -16,13 +16,13 @@
       "title": "SparkFix",
       "description": "SparkFix is a platform that connects qualified handymen with homeowners in need of repair and maintenance services.SparkFix offers multiple authentication options, Google Maps integration for location-based services, secure digital payment, and advanced filtering and sorting",
       "image": "/assets/images/sparkfix_project.png",
-      "link": ""
+      "link": "https://youtu.be/o_8SxoxiLJs?si=4EdgsSYJqwUOZ8t9"
     },
     {
       "title": "Green Check App",
       "description": "Farm management software QR code for traceability A network system connecting experts for each type of agricultural product.",
       "image": "/assets/images/green_check.png",
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=com.app.greencheck&hl=vi"
     },
     {
       "title": "Car Auto Tracking",
@@ -34,13 +34,13 @@
       "title": "Traveling",
       "description": "Web site for traveling.",
       "image": "/assets/images/viator_project.png",
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=com.viator.mobile.android&hl=vi"
     },
     {
       "title": "E-commerce",
       "description": "Application for store sell product.",
       "image": "/assets/images/green_agri.png",
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=mcom.app.greenagri&hl=vi"
     }
   ]
 }

@@ -119,6 +119,12 @@ const ProjectView = () => {
               >
                 Close
               </Button>
+              <Button
+                onClick={() => window.open(selectedService.link, '_blank')}
+                className="ml-4 mt-4 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >
+                View Demo
+              </Button>
             </div>
           </div>
         </div>
