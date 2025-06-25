@@ -20,7 +20,7 @@ const ExperienceView = () => {
   }, []);
 
   return (
-    <div className="container pt-24 flex flex-col justify-center">
+    <div className="container flex flex-col justify-center">
       <div className="text-start w-full">
         <Paragraph
           variant={AppTextVariant.H1}

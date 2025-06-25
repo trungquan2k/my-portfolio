@@ -3,14 +3,31 @@ import { FaDownload } from 'react-icons/fa';
 import Paragraph from '../../components/ui/text_custom';
 import { AppButton } from '@/components/ui/button-custom';
 const AboutMe = () => {
-  const [yearGraduation, setYearGraduation] = useState(new Date().getFullYear() - 2022);
+  const [yearGraduation, setYearGraduation] = useState(0);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setYearGraduation(new Date().getFullYear() - 2022);
+  //   }, 1000 * 60 * 60 * 24); // Update every day
+
+  //   return () => clearInterval(interval); // Cleanup on unmount
+  // }, []);
   useEffect(() => {
-    const interval = setInterval(() => {
-      setYearGraduation(new Date().getFullYear() - 2022);
-    }, 1000 * 60 * 60 * 24); // Update every day
+    const calculateYearGraduation = () => {
+      const graduationDate = new Date(2022, 0, 1);
+      const today = new Date();
+      const diffInTime = today.getTime() - graduationDate.getTime();
+      const diffInYears = diffInTime / (1000 * 60 * 60 * 24 * 365.25);
+      setYearGraduation(Number(diffInYears.toFixed(0)));
+    };
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    calculateYearGraduation();
+
+    const interval = setInterval(() => {
+      calculateYearGraduation();
+    }, 1000 * 60 * 60 * 24);
+
+    return () => clearInterval(interval);
   }, []);
 
   const onButtonClick = () => {
@@ -25,15 +42,15 @@ const AboutMe = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center justify-between">
+      <div className="flex flex-col lg:flex-row items-center justify-between py-12 ">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/1">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10">
             I’m <span className="text-blue-600">Hoang Trung Quan</span>
           </h1>
           <Paragraph align="start" className="mb-4">
-            I’m a passionate software developer with expertise in mobile and web development. With
-            {yearGraduation - 1}+ years of experience, I’ve worked on various projects ranging from
+            I’m a passionate software developer with expertise in mobile and web development. With +
+            {yearGraduation} years of experience, I’ve worked on various projects ranging from
             enterprise applications to innovative startups. I specialize in creating user-centric
             solutions that combine beautiful design with efficient functionality.
           </Paragraph>

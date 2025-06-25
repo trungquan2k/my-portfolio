@@ -12,19 +12,38 @@ import { cardVariants } from './home.types';
 
 const HomeView = () => {
   const [data, setData] = useState([]);
-  const [yearGraduation, setYearGraduation] = useState(new Date().getFullYear() - 2022);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setYearGraduation(new Date().getFullYear() - 2022);
-    }, 1000 * 60 * 60 * 24); // Update every day
+  const [yearGraduation, setYearGraduation] = useState(0);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+  useEffect(() => {
+    const calculateYearGraduation = () => {
+      const graduationDate = new Date(2022, 0, 1);
+      const today = new Date();
+      const diffInTime = today.getTime() - graduationDate.getTime();
+      const diffInYears = diffInTime / (1000 * 60 * 60 * 24 * 365.25);
+      setYearGraduation(Number(diffInYears.toFixed(0)));
+    };
+
+    calculateYearGraduation();
+
+    const interval = setInterval(() => {
+      calculateYearGraduation();
+    }, 1000 * 60 * 60 * 24);
+
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     fetch('/assets/models/about-me.json') // Path to the JSON file in the public folder
       .then((response) => response.json())
-      .then((data) => setData(data.data))
+      .then((data) => {
+        const updatedData = data.data.map((item) => {
+          if (item.key === 'Years of experience') {
+            return { ...item, value: `${yearGraduation}+` };
+          }
+          return item;
+        });
+        setData(updatedData);
+      })
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
 
@@ -41,7 +60,7 @@ const HomeView = () => {
     }
   }, []);
   return (
-    <div className="container pt-40 pb-24  flex flex-col justify-center ">
+    <div className="container pt-40  flex flex-col justify-center ">
       <div className="text-start w-full">
         <Paragraph
           variant={AppTextVariant.H1}
@@ -58,7 +77,7 @@ const HomeView = () => {
 
         <Paragraph align="start" className="max-w-xl pb-10">
           Passionate about creating beautiful and functional digital experiences with over +
-          {yearGraduation - 1} years of expertise in mobile application.
+          {yearGraduation} years of expertise in mobile application.
         </Paragraph>
 
         <AppButton
