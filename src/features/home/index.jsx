@@ -45,7 +45,7 @@ const HomeView = () => {
         setData(updatedData);
       })
       .catch((error) => console.error('Error loading JSON:', error));
-  }, []);
+  }, [yearGraduation]);
 
   const handleScroll = useCallback((event) => {
     event.preventDefault();
