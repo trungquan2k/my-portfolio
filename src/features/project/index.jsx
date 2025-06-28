@@ -78,9 +78,9 @@ const ProjectView = () => {
                 whileInView="visible"
                 whileHover="hover"
                 viewport={{ once: true, amount: 0.5 }}
-                className="relative rounded-lg shadow-md h-96 flex items-end justify-center text-center"
+                className="relative rounded-lg shadow-md h-40 flex items-end justify-center text-center"
                 style={{
-                  backgroundImage: `url(${service.image})`,
+                  // backgroundImage: `url(${service.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -101,14 +101,14 @@ const ProjectView = () => {
       {selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg overflow-hidden max-w-2xl w-full">
-            <div className="group relative aspect-[16/9] overflow-hidden">
+            {/* <div className="group relative aspect-[16/9] overflow-hidden">
               {' '}
               <img
                 src={selectedService.image}
                 alt="Zoomable"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-            </div>
+            </div> */}
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-2">{selectedService.title}</h2>
               <p className="text-md">{selectedService.description}</p>
