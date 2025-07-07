@@ -50,7 +50,7 @@ const AboutMe = () => {
           </h1>
           <Paragraph align="start" className="mb-4">
             I’m a passionate software developer with expertise in mobile and web development. With +
-            {yearGraduation} years of experience, I’ve worked on various projects ranging from
+            {yearGraduation - 1} years of experience, I’ve worked on various projects ranging from
             enterprise applications to innovative startups. I specialize in creating user-centric
             solutions that combine beautiful design with efficient functionality.
           </Paragraph>

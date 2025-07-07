@@ -38,14 +38,14 @@ const HomeView = () => {
       .then((data) => {
         const updatedData = data.data.map((item) => {
           if (item.key === 'Years of experience') {
-            return { ...item, value: `${yearGraduation}+` };
+            return { ...item, value: `${yearGraduation - 1}+` };
           }
           return item;
         });
         setData(updatedData);
       })
       .catch((error) => console.error('Error loading JSON:', error));
-  }, [yearGraduation]);
+  }, [yearGraduation - 1]);
 
   const handleScroll = useCallback((event) => {
     event.preventDefault();
@@ -77,7 +77,7 @@ const HomeView = () => {
 
         <Paragraph align="start" className="max-w-xl pb-10">
           Passionate about creating beautiful and functional digital experiences with over +
-          {yearGraduation} years of expertise in mobile application.
+          {yearGraduation - 1} years of expertise in mobile application.
         </Paragraph>
 
         <AppButton
