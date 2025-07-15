@@ -6,6 +6,7 @@ import AboutMe from '../../features/about-me';
 import ExperienceView from '../../features/experiences';
 import SkillsView from '../../features/skills';
 import ProjectView from '../../features/project';
+import DomainView from '../../features/domains';
 import ContactMeView from '../../features/contact-me';
 import HomeView from '../../features/home';
 const MainLayout = () => {
@@ -26,7 +27,8 @@ const MainLayout = () => {
           <SkillsView />
         </section>
         <section id="project">
-          <ProjectView />
+          {/* <ProjectView /> */}
+          <DomainView />
         </section>
         <section id="contact-me">
           <ContactMeView />
