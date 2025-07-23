@@ -56,6 +56,7 @@
         "Collection data, equipment management, farm crops",
         "E-commerce"
       ],
+      "titleRefer": "View Live",
       "description": [
         "Designed and managed app state using GetX for lightweight UI interaction and Bloc/Cubit for modular business logic control.",
         "Integrated Firebase Cloud Messaging to support real-time push notifications, background handling, and platform-specific permission flows.",

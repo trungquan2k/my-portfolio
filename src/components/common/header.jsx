@@ -1,10 +1,17 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Bars3Icon } from '@heroicons/react/24/solid';
 import NavLink from '../ui/nav-link/nav-link';
 import TabLink from '../ui/link/tab-link';
 import { throttle } from 'lodash';
-
+import {
+  Bars3Icon,
+  HomeIcon,
+  BriefcaseIcon,
+  CogIcon,
+  FolderIcon,
+  EnvelopeIcon,
+  UserIcon,
+} from '@heroicons/react/24/outline';
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -21,7 +28,7 @@ const Header = () => {
         setHideNav(false);
       }
       setPrevScrollY(window.scrollY);
-    }, 200); // Throttle to 200ms
+    }, 200);
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,11 +38,11 @@ const Header = () => {
 
   const menus = useMemo(
     () => [
-      { label: 'About me', link: '#about-me', key: 'about-me' },
-      { label: 'Experience', link: '#experience', key: 'experience' },
-      { label: 'Skills', link: '#skills', key: 'skills' },
-      { label: 'Project', link: '#project', key: 'project' },
-      { label: 'Contact me', link: '#contact-me', key: 'contact-me' },
+      { label: 'About me', link: '#about-me', key: 'about-me', icon: HomeIcon },
+      { label: 'Experience', link: '#experience', key: 'experience', icon: BriefcaseIcon },
+      { label: 'Skills', link: '#skills', key: 'skills', icon: CogIcon },
+      { label: 'Project', link: '#project', key: 'project', icon: FolderIcon },
+      { label: 'Contact me', link: '#contact-me', key: 'contact-me', icon: EnvelopeIcon },
     ],
     [],
   );
@@ -46,13 +53,13 @@ const Header = () => {
 
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 80,
+        top: section.offsetTop - 120,
         behavior: 'smooth',
       });
       window.history.pushState(null, null, targetId);
     }
   }, []);
-  // Intersection Observer to detect active section
+
   useEffect(() => {
     const sections = document.querySelectorAll('section');
     const options = {
@@ -64,11 +71,9 @@ const Header = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Find the menu item with a link that matches this section's ID
           const sectionId = entry.target.id;
           console.log('Section visible:', sectionId, 'with ratio:', entry.intersectionRatio);
 
-          // Find matching menu item
           const matchingMenu = menus.find(
             (menu) => menu.link === `#${sectionId}` || menu.key === sectionId,
           );
@@ -92,86 +97,91 @@ const Header = () => {
   }, [activeTab]);
 
   return (
-    <header
-      className={`z-10 fixed w-full bg-white ${
-        hideNav ? 'shadow-md' : 'shadow-none'
-      } transition-all duration-500 ${hideNav ? 'h-20 py-6' : 'h-30 py-4'}`}
-      role="banner"
-    >
-      {/* Entire Header Content Inside */}
-      <div className="container mx-auto px-6">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
+    <header className="z-10 fixed top-0 left-1/2 transform -translate-x-1/2 mt-6" role="banner">
+      <div className="bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-[1rem] px-4 py-4 shadow-4xl">
+        <div className="flex items-center justify-between w-full">
+          <div className="md:hidden">
+            <a
+              className="text-lg font-bold text-white hover:text-gray-300 transition-colors duration-300"
+              href="/"
+              onClick={(e) => handleScroll(e, '#about-me') || navigate('/')}
+            >
+              IAMQUAN
+            </a>
+          </div>
           <a
-            className="text-xl font-semibold text-gray-800"
+            className="absolute left-4 top-1/2 -translate-y-1/2 md:hidden text-lg font-bold text-white hover:text-gray-300 transition-colors duration-300"
             href="/"
             onClick={(e) => handleScroll(e, '#about-me') || navigate('/')}
           >
             IAMQUAN
           </a>
+          <nav className="hidden md:flex items-center space-x-8">
+            {menus.map((menu, index) => {
+              const IconComponent = menu.icon;
+              return (
+                <TabLink
+                  key={index}
+                  href={menu.link}
+                  isActive={activeTab === menu.key}
+                  onClick={(e) => handleScroll(e, menu.link)}
+                  className={`p-3 rounded-full transition-all duration-300 ${
+                    activeTab === menu.key
+                      ? 'text-white bg-green-600/80'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                  }`}
+                  title={menu.label}
+                >
+                  <IconComponent className="h-6 w-6" />
+                </TabLink>
+              );
+            })}
+          </nav>
 
-          {/* Hamburger Icon (Mobile Only) */}
-          <div className="md:hidden space-x-4">
-            <button onClick={toggleModal} className="text-gray-700 focus:outline-none">
-              <Bars3Icon className="h-6 w-6" />
+          <div className="md:hidden ">
+            <button
+              onClick={toggleModal}
+              className="text-white focus:outline-none p-2 rounded-full hover:bg-gray-700/50 transition-colors duration-200"
+            >
+              <Bars3Icon className="h-5 w-5" />
             </button>
           </div>
-
-          {/* Navigation Links */}
-          <nav className="hidden md:flex space-x-14">
-            {menus.map((menu, index) => (
-              <TabLink
-                key={index}
-                href={menu.link} // Keep href for accessibility
-                isActive={activeTab === menu.key}
-                onClick={(e) => handleScroll(e, menu.link)}
-              >
-                {menu.label}
-              </TabLink>
-            ))}
-          </nav>
-        </div>
-
-        {/* Social Links (Hide on Scroll) */}
-        <div
-          className={`flex justify-end transition-all duration-500 hidden md:flex ${
-            hideNav ? '-translate-y-5 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
-          }`}
-        >
-          <NavLink
-            onClick={() =>
-              window.open('https://www.linkedin.com/in/hoang-trung-quan-434a002b5/', '_blank')
-            }
-          >
-            Linkedin
-          </NavLink>
-          <p className="mx-2"></p>
-          <NavLink onClick={() => window.open('https://github.com/trungquan2k', '_blank')}>
-            Github
-          </NavLink>
-          <p className="mx-2"></p>
-          <NavLink onClick={() => window.open('https://zalo.me/0355739816', '_blank')}>
-            Zalo
-          </NavLink>
         </div>
       </div>
 
-      {/* Mobile Menu Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={toggleModal}>
-          <div className="fixed inset-y-0 right-0 w-64 bg-white shadow-lg p-6">
-            <nav className="flex flex-col space-y-4">
-              {menus.map((menu, index) => (
-                <TabLink
-                  key={index}
-                  href={menu.link} // Keep href for accessibility
-                  isActive={location.hash === menu.link}
-                  onClick={(e) => handleScroll(e, menu.link)}
-                >
-                  {menu.label}
-                </TabLink>
-              ))}
-            </nav>
+        <div className="fixed inset-0 z-40 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
+            onClick={toggleModal}
+          />
+          <div className="absolute top-24 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
+            <div
+              className="bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 
+                   rounded-2xl shadow-2xl p-6 w-64"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <nav className="flex flex-col space-y-3">
+                {menus.map((menu, index) => (
+                  <TabLink
+                    key={index}
+                    href={menu.link}
+                    isActive={activeTab === menu.key}
+                    onClick={(e) => {
+                      handleScroll(e, menu.link);
+                      setIsModalOpen(false);
+                    }}
+                    className={`text-sm font-medium px-4 py-3 rounded-xl transition-all duration-200 ${
+                      activeTab === menu.key
+                        ? 'text-white bg-green-600/80'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    }`}
+                  >
+                    {menu.label}
+                  </TabLink>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
       )}

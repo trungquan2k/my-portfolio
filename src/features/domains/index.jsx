@@ -28,70 +28,6 @@ const DomainView = () => {
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
 
-  // return (
-  //   <div onClick={() => closeModal()}>
-  //     <Paragraph
-  //       variant={AppTextVariant.H1}
-  //       align={AppTextAlign.START}
-  //       mb={10}
-  //       className="underline"
-  //     >
-  //       Domain developed
-  //     </Paragraph>
-  //     <div className="container mx-auto px-4">
-  //       <Swiper
-  //         slidesPerView={3} // Number of slides visible at once
-  //         spaceBetween={20} // 10px gap between slides
-  //         pagination={{ clickable: true }}
-  //         navigation={true}
-  //         autoplay={{ delay: 3000 }}
-  //         modules={[Pagination, Autoplay]}
-  //         className="mySwiper"
-  //         breakpoints={{
-  //           // Responsive breakpoints
-  //           320: {
-  //             slidesPerView: 1,
-  //           },
-  //           768: {
-  //             slidesPerView: 2,
-  //           },
-  //           1024: {
-  //             slidesPerView: 3,
-  //           },
-  //         }}
-  //       >
-  //         {domains.map((item, index) => (
-  //           <SwiperSlide key={index}>
-  //             <motion.div
-  //               variants={slideVariants}
-  //               initial="hidden"
-  //               whileInView="visible"
-  //               whileHover="hover"
-  //               viewport={{ once: true, amount: 0.5 }}
-  //               className="relative rounded-lg shadow-md h-full flex flex-col text-center"
-  //               style={{
-  //                 backgroundImage: `url(${item.image})`,
-  //                 backgroundSize: 'cover',
-  //                 backgroundPosition: 'center',
-  //               }}
-  //             >
-  //               {/* Overlay to improve text readability */}
-  //               <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-  //               <div className="relative z-10 text-white p-6">
-  //                 <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
-  //                 {item.tasks.map((element, index) => (
-  //                   <p key={index} className="text-lg line-clamp-2 justify-start text-start">
-  //                     - {element}
-  //                   </p>
-  //                 ))}
-  //               </div>
-  //             </motion.div>
-  //           </SwiperSlide>
-  //         ))}
-  //       </Swiper>
-  //     </div>
-  //   </div>
-  // );
   return (
     <div onClick={() => closeModal()}>
       <Paragraph
@@ -104,8 +40,8 @@ const DomainView = () => {
       </Paragraph>
       <div className="container mx-auto px-4">
         <Swiper
-          slidesPerView={3} // Number of slides visible at once
-          spaceBetween={20} // 10px gap between slides
+          slidesPerView={3}
+          spaceBetween={20}
           pagination={{ clickable: true }}
           navigation={true}
           autoplay={{ delay: 3000 }}
@@ -113,7 +49,6 @@ const DomainView = () => {
           className="mySwiper"
           watchSlidesProgress={true}
           breakpoints={{
-            // Responsive breakpoints
             320: {
               slidesPerView: 1,
             },
@@ -140,7 +75,6 @@ const DomainView = () => {
                   backgroundPosition: 'center',
                 }}
               >
-                {/* Overlay to improve text readability */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
                 <div className="relative z-10 text-white p-6 flex flex-col h-full min-h-[400px]">
                   <h2 className="text-2xl font-bold mb-4 flex-shrink-0">{item.title}</h2>
@@ -158,7 +92,6 @@ const DomainView = () => {
         </Swiper>
       </div>
 
-      {/* CSS để đảm bảo tất cả slides có cùng chiều cao */}
       <style jsx>{`
         .mySwiper .swiper-wrapper {
           align-items: stretch !important;
@@ -169,7 +102,6 @@ const DomainView = () => {
           display: flex !important;
         }
 
-        /* Tất cả slides sẽ có chiều cao bằng slide cao nhất */
         .mySwiper .swiper-slide > div {
           flex: 1 !important;
           display: flex !important;

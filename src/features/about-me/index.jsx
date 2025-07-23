@@ -45,7 +45,7 @@ const AboutMe = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between py-12 ">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/1">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-10">
             I’m <span className="text-blue-600">Hoang Trung Quan</span>
           </h1>
           <Paragraph align="start" className="mb-4">

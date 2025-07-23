@@ -13,7 +13,7 @@ const ExperienceView = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/assets/models/experiences.json') // Path to the JSON file in the public folder
+    fetch('/assets/models/experiences.json')
       .then((response) => response.json())
       .then((data) => setData(data.data))
       .catch((error) => console.error('Error loading JSON:', error));
@@ -39,7 +39,7 @@ const ExperienceView = () => {
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, amount: 0.5 }}
-              className="bg-white bg-opacity-75 rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow"
             >
               {/* Inline Title and Subtitle */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
@@ -59,7 +59,7 @@ const ExperienceView = () => {
                 {item.company}
               </Paragraph>
               <p className="text-gray-600 text-justify  mb-4">{item.type}</p>
-              <ul className="text-justify pb-3">
+              <ul className=" pb-3">
                 {item.description.map((desc, i) => (
                   <li key={i} className="text-md">
                     {desc}

@@ -1,4 +1,6 @@
 import Header from '../common/header';
+import CustomCursor from '../common/custom_cursor';
+import SocialLinks from '../common/contact_link';
 import Footer from '../common/footer';
 import { Loader } from 'lucide-react';
 import { useSelector } from 'react-redux';
@@ -13,8 +15,10 @@ const MainLayout = () => {
   const { loading } = useSelector((state) => state.global);
 
   return (
-    <div className="relative w-full animate-fade-in bg-[#F9FAFB]">
+    <div className="relative w-full animate-fade-in bg-[#222]">
       <Header />
+      <CustomCursor />
+      <SocialLinks />
       <div className="w-full main-content container mx-auto px-6 z-0">
         <section id="about-me">
           <HomeView />
@@ -27,7 +31,6 @@ const MainLayout = () => {
           <SkillsView />
         </section>
         <section id="project">
-          {/* <ProjectView /> */}
           <DomainView />
         </section>
         <section id="contact-me">

@@ -41,7 +41,7 @@ const Paragraph = ({
   mb = 0,
 }) => {
   const colorStyles = {
-    default: 'text-gray-900',
+    default: 'text-white',
     light: 'text-gray-400',
     dark: 'text-gray-700',
     primary: 'text-blue-600',
