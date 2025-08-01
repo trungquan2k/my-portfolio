@@ -14,12 +14,12 @@
         "Social media, E-commerce"
       ],
       "description": [
-        "Configuring and setting up the app environment with multiple flavors.",
-        "Implementing state management using GetX, Provider, and Bloc/Cubit.",
-        "Integrating Firebase for push notifications.",
-        "Developing and deploying service app links using Next.js + Netlify.",
-        "Managing internal builds and releasing applications on app stores (Google Play Store, Apple App Store).",
-        "Collaborating with the team to develop core app features."
+        "Feature ownership: Lead the development of key features (e.g., payment, authentication) with clean, maintainable code (Flutter/Dart and some feature combine with native Kotlin/Swift).",
+        "Performance & stability: Optimize app performance (startup time, memory usage) and monitor crashes via Firebase Crashlytics.",
+        "Developing and deploying service app links using Next.js + Netlify",
+        "Cross-platform collaboration: Work with backend teams to integrate APIs (REST/GraphQL) and designers to implement pixel-perfect UIs.",
+        "App release management: Handle store submissions, versioning, release notes, and compliance with store policies (privacy, guidelines).",
+        "End-to-end mobile app development: Own the full lifecycle of Android/iOS apps from architecture design to deployment on Google Play Store and Apple App Store"
       ]
     },
     {
