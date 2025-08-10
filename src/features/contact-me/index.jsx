@@ -28,7 +28,7 @@ const ContactMeView = () => {
                 </Paragraph>
                 <div className="flex items-center mb-4">
                   <FaPhone className="text-2xl text-blue-600 mr-4" />
-                  <p className="text-white text-justify">(+84) 877 289 816</p>
+                  <p className="text-white text-justify">(+84) 355 739 816</p>
                 </div>
               </div>
               <div>
