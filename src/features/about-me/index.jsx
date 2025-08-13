@@ -31,7 +31,7 @@ const AboutMe = () => {
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/cv_quan_dev.pdf';
+    const pdfUrl = '/assets/pdf/cv-quandev.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = '[Mobile Developer] Hoang Trung Quan.pdf'; // specify the filename
