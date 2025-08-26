@@ -31,10 +31,10 @@ const AboutMe = () => {
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/cv-quandev.pdf';
+    const pdfUrl = '/assets/pdf/trungquan_cv.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = '[Mobile Developer] Hoang Trung Quan.pdf'; // specify the filename
+    link.download = 'HoangTrungQuan-CV-MobileDeveloper.pdf'; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
