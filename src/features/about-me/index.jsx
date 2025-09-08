@@ -5,13 +5,7 @@ import { AppButton } from '@/components/ui/button-custom';
 const AboutMe = () => {
   const [yearGraduation, setYearGraduation] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setYearGraduation(new Date().getFullYear() - 2022);
-  //   }, 1000 * 60 * 60 * 24); // Update every day
 
-  //   return () => clearInterval(interval); // Cleanup on unmount
-  // }, []);
   useEffect(() => {
     const calculateYearGraduation = () => {
       const graduationDate = new Date(2022, 0, 1);
@@ -31,7 +25,7 @@ const AboutMe = () => {
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/trungquan_cv.pdf';
+    const pdfUrl = '/assets/pdf/cv_trungquan.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'HoangTrungQuan-CV-MobileDeveloper.pdf'; // specify the filename
