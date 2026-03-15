@@ -1,0 +1,56 @@
+{
+  "technical_skills": [
+    {
+      "title": "Flutter",
+      "description": "Cross-platform mobile development framework by Google.",
+      "icon": "📱"
+    },
+    {
+      "title": "React Native",
+      "description": "Cross-platform mobile development framework by Facebook.",
+      "icon": "⚛️"
+    },
+    {
+      "title": "Kotlin Compose",
+      "description": "Modern UI toolkit for Android development.",
+      "icon": "📲"
+    },
+    {
+      "title": "Javascript",
+      "description": "Programming language for web development.",
+      "icon": "📜"
+    },
+    {
+      "title": "Mysql",
+      "description": "Relational database management system.",
+      "icon": "🗃️"
+    }
+  ],
+  "sort_skills": [
+    {
+      "title": "Team working",
+      "description": "Collaborating effectively with others.",
+      "icon": "👥"
+    },
+    {
+      "title": "Logical Thinking",
+      "description": "Solving problems using logical reasoning.",
+      "icon": "🧠"
+    },
+    {
+      "title": "Researching",
+      "description": "Investigating and gathering information.",
+      "icon": "🔍"
+    },
+    {
+      "title": "Problem solving",
+      "description": "Finding solutions to complex issues.",
+      "icon": "🛠️"
+    },
+    {
+      "title": "IT English",
+      "description": "Communicating effectively in English in a tech context.",
+      "icon": "🌐"
+    }
+  ]
+}

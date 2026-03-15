@@ -5,7 +5,6 @@ import { AppButton } from '@/components/ui/button-custom';
 const AboutMe = () => {
   const [yearGraduation, setYearGraduation] = useState(0);
 
-
   useEffect(() => {
     const calculateYearGraduation = () => {
       const graduationDate = new Date(2022, 0, 1);
@@ -17,18 +16,21 @@ const AboutMe = () => {
 
     calculateYearGraduation();
 
-    const interval = setInterval(() => {
-      calculateYearGraduation();
-    }, 1000 * 60 * 60 * 24);
+    const interval = setInterval(
+      () => {
+        calculateYearGraduation();
+      },
+      1000 * 60 * 60 * 24,
+    );
 
     return () => clearInterval(interval);
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/HoangTrungQuan_Senior_Flutter_Developer_CV.pdf';
+    const pdfUrl = '/assets/pdf/[Mobile Developer]Hoang_Trung_Quan.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'HoangTrungQuan_Senior_Flutter_Developer_CV.pdf'; // specify the filename
+    link.download = '[HoangTrungQuan]Mobile_Developer.pdf'; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

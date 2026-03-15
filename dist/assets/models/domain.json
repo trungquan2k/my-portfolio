@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "title": "IOT Solution",
+      "image": "/assets/images/domain_iot.jpg",
+      "link": "",
+      "tasks": [
+        "Remote control home appliance control",
+        "Check the room's environmental information with the built-in sensor",
+        "Cooperation with Gramo products",
+        "It is equipped with various other functions that are convenient for daily life.",
+        "Real-time monitoring and status updates of connected devices",
+        "Custom scheduling for automated operations and energy savings"
+      ]
+    },
+    {
+      "title": "Social Media ",
+      "image": "/assets/images/domain_social_media.jpg",
+      "tasks": [
+        "Insida is a platform that brings together real estate professionals and enthusiasts, creating a space to explore, share, and connect.",
+        "It features captivating property photos, videos, and virtual tours, making it easier to showcase and discover properties.",
+        "Users can comment, like, and follow their favorite listings and agents",
+        "Includes messaging and notification system to keep users updated"
+      ],
+      "link": ""
+    },
+    {
+      "title": "Data Entry & Tracking App",
+      "tasks": [
+        "Farm management software",
+        "QR code for traceability",
+        "A network system connecting experts for each type of agricultural product",
+        "Allows farmers to log activities such as planting, fertilizing, and harvesting",
+        "Export reports to support compliance and certification processes",
+        "Real-time status updates and notifications for job progress"
+      ],
+      "image": "/assets/images/domain_tracking.jpeg",
+      "link": "https://play.google.com/store/apps/details?id=com.app.greencheck&hl=vi"
+    },
+    {
+      "title": "Banking",
+      "description": "Web site for traveling.",
+      "tasks": [
+        "Control orders in auto and motorbike repair shops",
+        "Helps window owners make monthly statistics on spending accounts",
+        "Track revenue and expenses through detailed charts and summaries",
+        "Manage multiple accounts and transactions securely"
+      ],
+      "image": "/assets/images/domain_banking.jpeg",
+      "link": "https://play.google.com/store/apps/details?id=com.viator.mobile.android&hl=vi"
+    },
+    {
+      "title": "E-commerce",
+      "description": "Application for store sell product.",
+      "tasks": [
+        "Application for store sell product",
+        "Supports inventory management and product categorization",
+        "Integrated payment gateways for a seamless checkout process",
+        "Customers can leave reviews and ratings for each product"
+      ],
+      "image": "/assets/images/domain_ecommerce.jpg",
+      "link": "https://play.google.com/store/apps/details?id=mcom.app.greenagri&hl=vi"
+    }
+  ]
+}
