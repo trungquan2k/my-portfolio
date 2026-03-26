@@ -40,7 +40,7 @@ const AboutMe = () => {
     <div>
       <div className="flex flex-col lg:flex-row items-center justify-between py-12 ">
         {/* Text Content */}
-        <div className="text-center lg:text-left lg:w-1/1">
+        <div className="text-center lg:text-left lg:flex-1 pr-0 lg:pr-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-10">
             I’m <span className="text-blue-600">Hoang Trung Quan</span>
           </h1>
@@ -61,12 +61,13 @@ const AboutMe = () => {
           </AppButton>
         </div>
 
-        {/* Image */}
-        <img
-          src="/assets/images/hoangtrungquan.jpg"
-          className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 transition-all duration-300 ease-in-out rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0"
-          alt="My profile"
-        />
+        <div className="flex-shrink-0 w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 aspect-square rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0 overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-500 hover:shadow-2xl">
+          <img
+            src="/assets/images/profile-quan.jpg"
+            className="w-full h-full object-cover"
+            alt="My profile"
+          />
+        </div>
       </div>
     </div>
   );

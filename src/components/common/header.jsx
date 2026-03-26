@@ -47,33 +47,40 @@ const Header = () => {
     [],
   );
 
-  const handleScroll = useCallback((event, targetId) => {
-    event.preventDefault();
-    const section = document.querySelector(targetId);
+  const handleScroll = useCallback(
+    (event, targetId) => {
+      event.preventDefault();
+      const section = document.querySelector(targetId);
 
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 120,
-        behavior: 'smooth',
-      });
-      window.history.pushState(null, null, targetId);
-    }
-  }, []);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 120,
+          behavior: 'smooth',
+        });
+        window.history.pushState(null, null, targetId);
+
+        // Update active tab immediately on click
+        const matchingMenu = menus.find((menu) => menu.link === targetId);
+        if (matchingMenu) {
+          setActiveTab(matchingMenu.key);
+        }
+      }
+    },
+    [menus],
+  );
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
     const options = {
       root: null,
-      rootMargin: '-20% 0px -20% 0px',
-      threshold: [0.25, 0.5, 0.75],
+      rootMargin: '-10% 0px -40% 0px', // More sensitive to current section
+      threshold: [0.1, 0.5],
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
           const sectionId = entry.target.id;
-          console.log('Section visible:', sectionId, 'with ratio:', entry.intersectionRatio);
-
           const matchingMenu = menus.find(
             (menu) => menu.link === `#${sectionId}` || menu.key === sectionId,
           );
@@ -94,7 +101,7 @@ const Header = () => {
         observer.unobserve(section);
       });
     };
-  }, [activeTab]);
+  }, [menus]);
 
   return (
     <header className="z-10 fixed top-0 left-1/2 transform -translate-x-1/2 mt-6" role="banner">
