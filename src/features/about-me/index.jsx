@@ -30,7 +30,7 @@ const AboutMe = () => {
     const pdfUrl = '/assets/pdf/[Mobile Developer]Hoang_Trung_Quan.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = '[HoangTrungQuan]Mobile_Developer.pdf'; // specify the filename
+    link.download = '[Mobile Developer]Hoang_Trung_Quan.pdf'; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -63,7 +63,7 @@ const AboutMe = () => {
 
         <div className="flex-shrink-0 w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 aspect-square rounded-full border-4 border-gray-300 shadow-lg mt-8 lg:mt-0 overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-500 hover:shadow-2xl">
           <img
-            src="/assets/images/profile-quan.jpg"
+            src="/assets/images/quan.jpg"
             className="w-full h-full object-cover"
             alt="My profile"
           />
