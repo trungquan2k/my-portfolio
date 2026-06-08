@@ -77,7 +77,7 @@ const HomeView = () => {
 
         <Paragraph align="start" className="max-w-xl pb-10">
           Passionate about creating beautiful and functional digital experiences with over +
-          {yearGraduation - 1} years of expertise in mobile application.
+          {yearGraduation} years of expertise in mobile application.
         </Paragraph>
 
         <AppButton
