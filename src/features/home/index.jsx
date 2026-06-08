@@ -38,7 +38,7 @@ const HomeView = () => {
       .then((data) => {
         const updatedData = data.data.map((item) => {
           if (item.key === 'Years of experience') {
-            return { ...item, value: `${yearGraduation - 1}+` };
+            return { ...item, value: `${yearGraduation}+` };
           }
           return item;
         });
