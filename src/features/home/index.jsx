@@ -20,7 +20,7 @@ const HomeView = () => {
       const today = new Date();
       const diffInTime = today.getTime() - graduationDate.getTime();
       const diffInYears = diffInTime / (1000 * 60 * 60 * 24 * 365.25);
-      setYearGraduation(Number(diffInYears.toFixed(0)));
+      setYearGraduation(Math.floor(diffInYears));
     };
 
     calculateYearGraduation();
