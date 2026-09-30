@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useTheme } from '../../../context/ThemeContext';
 
 const ParagraphSizes = {
   SMALL: 'small',
@@ -40,12 +41,15 @@ const Paragraph = ({
   size = ParagraphSizes.MEDIUM,
   mb = 0,
 }) => {
+  const { theme } = useTheme() || {};
+  const isDark = theme ? theme === 'dark' : true;
+
   const colorStyles = {
-    default: 'text-white',
-    light: 'text-gray-400',
-    dark: 'text-gray-700',
-    primary: 'text-blue-600',
-    secondary: 'text-indigo-600',
+    default: isDark ? 'text-white' : 'text-slate-900',
+    light: isDark ? 'text-slate-400' : 'text-slate-600',
+    dark: isDark ? 'text-slate-200' : 'text-slate-800',
+    primary: 'text-blue-600 dark:text-blue-400',
+    secondary: 'text-indigo-600 dark:text-indigo-400',
   };
 
   const alignStyles = {

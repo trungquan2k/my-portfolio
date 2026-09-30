@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import NavLink from '../ui/nav-link/nav-link';
+import { useNavigate } from 'react-router-dom';
 import TabLink from '../ui/link/tab-link';
 import { throttle } from 'lodash';
 import {
@@ -10,23 +9,15 @@ import {
   CogIcon,
   FolderIcon,
   EnvelopeIcon,
-  UserIcon,
 } from '@heroicons/react/24/outline';
 const Header = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [hideNav, setHideNav] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      if (window.scrollY > prevScrollY) {
-        setHideNav(true);
-      } else {
-        setHideNav(false);
-      }
       setPrevScrollY(window.scrollY);
     }, 200);
 
@@ -134,7 +125,7 @@ const Header = () => {
                   onClick={(e) => handleScroll(e, menu.link)}
                   className={`p-3 rounded-full transition-all duration-300 ${
                     activeTab === menu.key
-                      ? 'text-white bg-green-600/80'
+                      ? 'text-white bg-blue-600/80'
                       : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
                   }`}
                   title={menu.label}

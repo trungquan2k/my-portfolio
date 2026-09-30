@@ -9,16 +9,19 @@ import Paragraph, {
 import TextScroll from '../../components/ui/text-scroll';
 import { AppButton, ButtonVariants } from '../../components/ui/button-custom';
 import { cardVariants } from './home.types';
+import { useTheme } from '../../context/ThemeContext';
 
 const HomeView = () => {
   const [data, setData] = useState([]);
   const [yearGraduation, setYearGraduation] = useState(0);
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     const calculateYearGraduation = () => {
       const graduationDate = new Date(2022, 0, 1);
       const today = new Date();
-      const diffInTime = today.getTime() - graduationDate.getTime();
+      const diffInTime = today.getTime() -  graduationDate.getTime();
       const diffInYears = diffInTime / (1000 * 60 * 60 * 24 * 365.25);
       setYearGraduation(Math.floor(diffInYears));
     };
@@ -45,7 +48,7 @@ const HomeView = () => {
         setData(updatedData);
       })
       .catch((error) => console.error('Error loading JSON:', error));
-  }, [yearGraduation - 1]);
+  }, [yearGraduation]);
 
   const handleScroll = useCallback((event) => {
     event.preventDefault();
@@ -95,9 +98,13 @@ const HomeView = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              whileHover="hover" // Apply hover animation
+              whileHover="hover"
               viewport={{ once: true, amount: 0.5 }}
-              className="bg-gray-100 p-6 rounded-lg shadow-md transition-shadow cursor-pointer"
+              className={`p-6 rounded-2xl border transition-all cursor-pointer ${
+                isDark
+                  ? 'bg-slate-900/60 backdrop-blur-xl border-slate-800/80 shadow-xl'
+                  : 'bg-white/90 border-slate-200/80 shadow-lg shadow-slate-200/50'
+              }`}
             >
               <Paragraph
                 variant={AppTextVariant.H2}
@@ -109,7 +116,7 @@ const HomeView = () => {
               <Paragraph
                 variant={AppTextVariant.P}
                 align={AppTextAlign.CENTER}
-                color={AppTextColor.DARK}
+                color={isDark ? AppTextColor.LIGHT : AppTextColor.DARK}
               >
                 {item.key}
               </Paragraph>

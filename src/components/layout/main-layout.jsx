@@ -1,4 +1,5 @@
 import Header from '../common/header';
+import PullLampToggle from '../common/pull-lamp-toggle';
 import CustomCursor from '../common/custom_cursor';
 import SocialLinks from '../common/contact_link';
 import Footer from '../common/footer';
@@ -7,16 +8,22 @@ import { useSelector } from 'react-redux';
 import AboutMe from '../../features/about-me';
 import ExperienceView from '../../features/experiences';
 import SkillsView from '../../features/skills';
-import ProjectView from '../../features/project';
 import DomainView from '../../features/domains';
 import ContactMeView from '../../features/contact-me';
 import HomeView from '../../features/home';
+import { useTheme } from '../../context/ThemeContext';
 const MainLayout = () => {
   const { loading } = useSelector((state) => state.global);
+  const { theme } = useTheme();
 
   return (
-    <div className="relative w-full animate-fade-in bg-[#222]">
+    <div
+      className={`relative w-full animate-fade-in transition-colors duration-300 ${
+        theme === 'dark' ? 'bg-[#18181b] text-white' : 'bg-slate-50 text-slate-900'
+      }`}
+    >
       <Header />
+      <PullLampToggle />
       <CustomCursor />
       <SocialLinks />
       <div className="w-full main-content container mx-auto px-6 z-0">

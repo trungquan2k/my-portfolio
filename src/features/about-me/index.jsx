@@ -2,8 +2,12 @@ import { useEffect, useState } from 'react';
 import { FaDownload } from 'react-icons/fa';
 import Paragraph from '../../components/ui/text_custom';
 import { AppButton } from '@/components/ui/button-custom';
+import { useTheme } from '../../context/ThemeContext';
+
 const AboutMe = () => {
   const [yearGraduation, setYearGraduation] = useState(0);
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     const calculateYearGraduation = () => {
@@ -11,7 +15,7 @@ const AboutMe = () => {
       const today = new Date();
       const diffInTime = today.getTime() - graduationDate.getTime();
       const diffInYears = diffInTime / (1000 * 60 * 60 * 24 * 365.25);
-      setYearGraduation(Number(diffInYears.toFixed(0)));
+      setYearGraduation(Math.floor(diffInYears));
     };
 
     calculateYearGraduation();
@@ -41,7 +45,11 @@ const AboutMe = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between py-12 ">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:flex-1 pr-0 lg:pr-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-10">
+          <h1
+            className={`text-4xl lg:text-5xl font-bold mb-10 ${
+              isDark ? 'text-white' : 'text-slate-900'
+            }`}
+          >
             I’m <span className="text-blue-600">Hoang Trung Quan</span>
           </h1>
           <Paragraph align="start" className="mb-4">

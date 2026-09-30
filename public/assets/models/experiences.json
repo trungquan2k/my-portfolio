@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "title": "Full-stack & Mobile Engineer (Flutter/React Native/React/Java)",
+      "title": "Software Engineer (Flutter/React Native/React/Java)",
       "company": "SparkMinds Company",
       "type": "Full-time",
       "startDate": "2023-08-01T00:00:00Z",
@@ -14,12 +14,13 @@
         "Social: E-commerce & Social networking platforms"
       ],
       "description": [
-        "Core Mobile Development: Spearhead development of critical modules (Payment, KYC) using Flutter/Dart integrated with Native Kotlin/Swift.",
-        "Full-stack Versatility: Actively supported company projects by developing web frontends with ReactJS and implementing backend APIs using Java Spring Boot to fill resource gaps.",
-        "Internal Resource Support: Delivered high-quality features in React Native and Java projects, ensuring on-time delivery for cross-functional initiatives.",
-        "Performance Optimization: Drastically improved app performance and memory footprint; monitored production stability via Firebase Crashlytics.",
-        "Web Engagement: Deployed SEO-optimized service landing pages using Next.js and Netlify to boost user traffic.",
-        "E2E Deployment: Managed the full product lifecycle from architecture design to store submission on Google Play and Apple App Store."
+        "Leveraged AI-assisted tools to accelerate development, debugging, technical research, and repetitive engineering tasks across projects.",
+        "Reduced third-party dependency and operational costs by 5% by implementing an internal deep-linking solution.",
+        "Delivered 4+ mobile products end-to-end, from requirements analysis and development to production launch, maintenance, and continuous improvement.",
+        "Managed and prioritized multiple features and development tasks in parallel, coordinating implementation, debugging, testing, and releases across Mobile, Web, and Backend.",
+        "Built and maintained mobile features across Android and iOS, covering UI/UX, state management, API integration, local storage, authentication, deep linking, push notifications, and real-time communication.",
+        "Diagnosed and resolved complex issues involving performance, networking, lifecycle, memory, native integrations, build configurations, APIs, and production crashes.",
+        "Mentored team members through technical guidance and code reviews, promoting coding best practices and maintainable solutions."
       ]
     },
     {
@@ -35,13 +36,13 @@
         "IOT solution"
       ],
       "description": [
-        "Developed a cross-platform mobile app using Flutter to interface with IoT devices.",
-        "Integrated native Android (Kotlin) code into Flutter via platform channels to enable real-time video calling between the IoT device and mobile (iPhone/Android).",
-        "Built dynamic real-time charts (occupancy detection) synced from IoT sensors, optimized with stream-based data updates using WebSocket.",
-        "Implemented NFC-based login authentication via chip-embedded cards.",
-        "Built push notification system to deliver alerts (e.g., intrusion detection, weather updates) using Firebase Cloud Messaging.",
-        "Utilized GraphQL for efficient and structured device communication and data querying.",
-        "Supported features like live weather updates, intruder alerts, and user presence detection through sensor integration."
+        "Developed a cross-platform mobile application with Flutter for seamless interaction and control of IoT devices.",
+        "Integrated native Android (Kotlin) capabilities through Flutter Platform Channels to enable real-time video communication between mobile devices and IoT hardware.",
+        "Implemented offline-first data synchronization between server and local storage, ensuring reliable application functionality without an active internet connection.",
+        "Built real-time occupancy monitoring and dynamic data visualization using IoT sensor data, Socket.IO, and stream-based updates, enabling users to monitor device status and occupancy in real time.",
+        "Implemented NFC-based authentication using chip-enabled cards for secure and convenient user access.",
+        "Integrated GraphQL for efficient device communication, data querying, and real-time application workflows.",
+        "Optimized mobile-to-device communication and data handling to ensure responsive and reliable operation across varying network conditions."
       ]
     },
     {
