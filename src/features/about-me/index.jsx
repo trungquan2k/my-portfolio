@@ -31,10 +31,10 @@ const AboutMe = () => {
   }, []);
 
   const onButtonClick = () => {
-    const pdfUrl = '/assets/pdf/[Mobile Developer]Hoang_Trung_Quan.pdf';
+    const pdfUrl = '/assets/pdf/[Mobile Engineering]_HoangTrungQuan.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = '[Mobile Developer]Hoang_Trung_Quan.pdf'; // specify the filename
+    link.download = '[Mobile Engineering]_HoangTrungQuan.pdf'; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -46,9 +46,8 @@ const AboutMe = () => {
         {/* Text Content */}
         <div className="text-center lg:text-left lg:flex-1 pr-0 lg:pr-12">
           <h1
-            className={`text-4xl lg:text-5xl font-bold mb-10 ${
-              isDark ? 'text-white' : 'text-slate-900'
-            }`}
+            className={`text-4xl lg:text-5xl font-bold mb-10 ${isDark ? 'text-white' : 'text-slate-900'
+              }`}
           >
             I’m <span className="text-blue-600">Hoang Trung Quan</span>
           </h1>
